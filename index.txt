@@ -1,0 +1,8 @@
+{{Title:slwomoVideo %s}}
+{{H1:Welcome}}
+
+slowmoVideo is an OpenSource program that creates slow-motion videos from your footage.
+
+The DOCTYPE declaration is &lt;!DOCTYPE html&gt; and is case-insensitive in the HTML syntax. DOCTYPEs from earlier versions of HTML were longer because the HTML language was SGML-based and therefore required a reference to a DTD. With HTML5 this is no longer the case and the DOCTYPE is only needed to enable standards mode for documents written using the HTML syntax. Browsers already do this for &lt;!DOCTYPE html&gt;. 
+
+The HTML5 specification will not be considered finished before there are at least two complete implementations of the specification. A test suite will be used to measure completeness of the implementations. This approach differs from previous versions of HTML, where the final specification would typically be approved by a committee before being actually implemented. The goal of this change is to ensure that the specification is implementable, and usable by authors once it is finished. 
