@@ -10,4 +10,5 @@ Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports are planned 
 All available files are listed [[builds/ here]]. The last ones are:
 * [[builds/slowmoVideo-0.1-Linux-64-bit-Jul18.tar.bz2 slowmoVideo 0.1 64-bit]], Linux (Jul 18)
 * [[builds/slowmoVideo-0.1-Linux-32-bit-Jul18.tar.bz2 slowmoVideo-0.1 32-bit]], Linux (Jul 18)
+The source code will soon be available as well. 
 

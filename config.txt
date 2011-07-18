@@ -1,6 +1,6 @@
 {{Author:Simon A. Eugster}}
 {{Homelink:http://slowmoVideo.granjow.net}}
 {{Lang:en}}
-{{Title: ─ .:: slowmoVideo.granjow.net}}
+{{Title: .:: slowmoVideo.granjow.net}}
 {{Namespace:w=http://de.wikipedia.org/wiki/%s|cut}}
 {{Namespace:we=http://en.wikipedia.org/wiki/%s|cut}}

@@ -1,4 +1,4 @@
-{{Title:slwomoVideo %s}}
+{{Title:slowmoVideo %s}}
 {{H1:Welcome}}
 
 slowmoVideo is an OpenSource program that creates slow-motion videos from your footage.
