@@ -1,0 +1,119 @@
+@font-face {
+	font-family: "Gentium Basic";
+	src: url(./GenBasR.ttf);
+}
+@font-face {
+	font-family: "Gentium Basic Italic";
+	src: url(./GenBasI.ttf);
+}
+
+
+body {
+	background-color: #828282;
+}
+
+#content {
+	background-color: #454545;
+	border: 1px solid #b4b4b4;
+	border-radius: 32px;
+	color: #d4d4d4;
+	font-family: "Gentium Basic", "Trebuchet MS", serif;
+	margin: 50px 0 0 100px;
+	padding: 25px 50px;
+	position: relative;
+	width: 698px;
+}
+
+#flowImage {
+	background: url(pixelFlow.png) top right no-repeat;
+	position: absolute;
+	top: -25px;
+	right: -41px;
+	width: 147px;
+	height: 129px;
+}
+
+header h1 {
+	font-size: 40px;
+	font-weight: normal;
+	margin: 20px 0;
+	padding-right: 150px;
+	text-align: right;
+}
+header h1, header h1 * {
+	color: #d4d4d4;
+	text-decoration: none;
+}
+
+#separator {
+	background-color: #828282;
+	margin-left: -51px;
+	padding: 3px 0;
+	width: 800px;
+}
+#separator hr {
+	border: none;
+	border-top: 2px dotted #454545;
+	margin: 0 20px;
+}
+
+br.c {
+	clear: both;
+	font-size: 1px;
+}
+
+nav {
+	margin: 0;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav a {
+	color: #828282;
+	text-decoration: none;
+}
+nav ul li {
+	background-color: #454545;
+	border: 1px solid #828282;
+	border-top: none;
+	display: block;
+	float: left;
+	margin-right: -1px;
+	padding: 2px .8em;
+}
+nav ul li:first-child {
+	border-bottom-left-radius: 8px;
+}
+nav ul li:last-child {
+	border-bottom-right-radius: 8px;
+}
+nav ul li.open {
+	background-color: #828282;
+	border-color: #b4b4b4;
+	font-weight: bold;
+}
+nav ul li.open a {
+	color: #272727;
+}
+
+h2 {
+	clear: both;
+	font-size: 32px;
+	font-weight: normal;
+	margin-top: 1em;
+	padding: 0;
+}
+
+#content p a {
+	color: #90f442;
+	text-decoration: none;
+	border-bottom: 1px dotted #90f442;
+}
+
+footer p {
+	font-size: .8em;
+	font-family: "Gentium Basic Italic", serif;
+	text-align: center;
+}

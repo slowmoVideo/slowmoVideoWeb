@@ -1,2 +1,46 @@
-{{#debug}}
-{{#debug:list}}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <title>{{{title|}}}</title>
+  </head>
+  <body>
+  <div id="content">
+  <div id="flowImage"> </div>
+  
+  <header>
+  <h1><a href="{{{homelink}}}">slowmoVideo</a></h1>
+  </header>
+  
+  <div id="separator"><hr/></div>
+  
+  
+  
+  <nav>
+  {{{menu|}}}
+  <br class="c"/>
+  </nav>
+  
+  <h2>{{{h1|}}}</h2>
+  {{{text|}}}
+  
+  
+  
+  
+  <div id="separator"><hr/></div>
+  
+  {{#debug}}
+  {{#debug:list}}
+  
+  
+  
+  <div id="separator"><hr/></div>
+  
+  <footer>
+  <p>(c) 2011 Simon A. Eugster (Granjow)</p>
+  </footer>
+  
+  </div><!-- End of the content div -->
+  </body>
+</html>
