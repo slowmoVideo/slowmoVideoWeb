@@ -53,13 +53,14 @@ header h1, header h1 * {
 	text-decoration: none;
 }
 
-#separator {
+.separator {
 	background-color: #828282;
+	clear: both;
 	margin-left: -51px;
 	padding: 3px 0;
 	width: 800px;
 }
-#separator hr {
+.separator hr {
 	border: none;
 	border-top: 2px dotted #454545;
 	margin: 0 20px;
@@ -116,10 +117,34 @@ h2 {
 	padding: 0;
 }
 
+h3 {
+	clear: both;
+}
+
 a {
 	color: #90f442;
 	text-decoration: none;
 	border-bottom: 1px dotted #90f442;
+}
+
+figure {
+	border: 1px solid #828282;
+	border-radius: 10px;
+	float: right;
+	margin: .5em 0 .5em .5em;
+	position: relative;
+	width: 298px;
+}
+figure a {
+	border: none;
+}
+figure img {
+	margin-top: -1px;
+	margin-left: -1px;
+	width: 300px;
+}
+figure figcaption {
+	padding: 0 .5em;
 }
 
 footer p {

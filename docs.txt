@@ -1,0 +1,29 @@
+{{Title:Documentation for %s}}
+{{H1:Documentation}}
+
+''slowmoUI'' (the user interface for slowmoVideo) supports normal shortcuts via the menu and additional shortcuts that can be displayed by presshing $$h$$. Combined shortcuts like ''Save as (s-a)'' are triggered by typing $$sa$$. If you wait longer than about half a second between two key strokes, the shortcut status will be reset.
+
+=== New project ===
+[[Image:pngGUI/newProject.png|thumb|New project dialog]]
+New projects should be created in an ''empty'' directory. You can either select a video file or a bunch of images (e.g. from a timelapse sequence). After pressing Ok, slowmoVideo will save the project and start extracting frames.
+
+
+=== Curves ===
+[[Image:pngGUI/simpleCurve.png|thumb|Simple linear curve]]
+The canvas now is your playground. It has two axis:
+* The vertical ''source axis'' where the frame number is displayed at the current cursor position. Imagine a reel of film rolled out along this axis. This is how it works. The first frame is at the bottom, the last frame is at the fat line that becomes visible when zooming out with Ctrl+Mousewheel.
+* The horizontal ''output axis'' will be the rendered video. Now if you draw a curve, what slowmoVideo does is that for each output frame it draws a vertical line and looks where it crosses your curve. From this point it goes left until it hits the source axis and takes the frame at this position.
+
+With this information you see that, in the picture on the right, the first line plays the video at its original speed since the time passed on the output axis is the same as the time passed on the source axis. The second line stops the video, the third line plays it at low speed (maybe 7&nbsp;%). The last line plays the video in reverse direction.
+
+The monitor at the top (can be dragged around, by the way, it's a Qt4 widget) displays the source frame at the mouse position.
+
+[[Image:pngGUI/bezierCurve.png|thumb|Bézier curves]]
+slowmoVideo also supports ''Bézier curves''. A segment can be changed from linear to Bézier (and the other way round) by right-clicking on it. You will notice that the handles cannot be moved: This is wrong however. Nodes have priority, but by holding $$Shift$$ they are ignored. This is how you can drag them and create a wonderful smooth curve.
+
+
+=== Rendering ===
+[[Image:pngGUI/renderDialog.png|thumb|Rendering dialog]]
+Finally you will want to render your project. Why all the colours, you may wonder? Green indicates correct values, red indicates invalid values. When rendering to images, the filename pattern must contain a $$%1$$ (which will be replaced by the frame number), otherwise the field will be red and you cannot start rendering. (Try it!)
+
+Since rendering is a time-consuming process, you might want to render with the small resolution first and check if you like the result. If you do, chose the original frame size and go have a big lunch since it will take some time :)

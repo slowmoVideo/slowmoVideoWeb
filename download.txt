@@ -4,7 +4,7 @@
 === Requirements ===
 The Optical Flow library used by slowmoVideo (GPU-KLT+FLOW requires an ''nVidia card''. I cannot change this, sorry. If time allows I will add other libraries in future, but don’t count on this. That’s not something I can do in a few minutes.
 
-Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports are planned for after August. I’m thinking about accepting donations for these ports since I personally do not need them.
+Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports are planned for the time after August. I’m thinking about accepting donations for these ports since I personally do not need them.
 
 === Download ===
 All available files are listed [[builds/ here]]. The last ones are:

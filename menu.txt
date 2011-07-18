@@ -1,4 +1,5 @@
 * Index, index.html
 * Download, download.html
 * Videos, videos.html
+* Documentation, docs.html
 * granjow.net, http://granjow.net

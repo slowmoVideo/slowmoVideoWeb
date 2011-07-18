@@ -1,0 +1,6 @@
+{{#ifeq:thumb|{{{type}}}|
+<figure class="imgThumb">
+<a href="{{{path}}}"><img src="{{{thumb}}}"/></a>{{#if:{{{text|}}}|
+<figcaption>{{{text}}}</figcaption>|No text given}}
+</figure>
+|Unsupported image type! Use thumb.}}
