@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="{{{lang}}}">
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/style.css" type="text/css">
@@ -24,14 +24,6 @@
   
   <h2>{{{h1|}}}</h2>
   {{{text|}}}
-  
-  
-  
-  
-  <div id="separator"><hr/></div>
-  
-  {{#debug}}
-  {{#debug:list}}
   
   
   

@@ -162,9 +162,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
+     inkscape:zoom="1"
      inkscape:cx="443.69551"
-     inkscape:cy="682.40227"
+     inkscape:cy="469.85394"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -242,7 +242,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -284,7 +284,7 @@
        style="color:#000000;fill:#828282;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     <flowRoot
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#d4d4d4;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Gentium;-inkscape-font-specification:Gentium"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#d4d4d4;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Gentium Basic;-inkscape-font-specification:Gentium Basic"
        id="flowRoot4468"
        transform="translate(-0.5,-0.49783477)"><flowRegion
          id="flowRegion4470"><use
@@ -297,7 +297,7 @@
          id="flowPara4474">slowmoVideo is an OpenSource program that creates slow-motion videos from your footage.</flowPara><flowPara
          id="flowPara4476" /><flowPara
          id="flowPara4478">The DOCTYPE declaration is &lt;!DOCTYPE html&gt; and is case-insensitive in the HTML syntax. DOCTYPEs from earlier versions of HTML were longer <flowSpan
-   style="fill:#90f442;fill-opacity:1"
+   style="fill:#90f442;fill-opacity:1;-inkscape-font-specification:Gentium Basic;font-family:Gentium Basic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
    id="flowSpan5301">because</flowSpan> the HTML language was SGML-based and therefore required a reference to a DTD. With HTML5 this is no longer the case and the DOCTYPE is only needed to enable standards mode for documents written using the HTML syntax. Browsers already do this for &lt;!DOCTYPE html&gt;. </flowPara><flowPara
          id="flowPara4480" /><flowPara
          id="flowPara4482">The HTML5 specification will not be considered finished before there are at least two complete implementations of the specification. A test suite will be used to measure completeness of the implementations. This approach differs from previous versions of HTML, where the final specification would typically be approved by a committee before being actually implemented. The goal of this change is to ensure that the specification is implementable, and usable by authors once it is finished. </flowPara></flowRoot>    <text

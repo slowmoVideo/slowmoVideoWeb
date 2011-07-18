@@ -1,11 +1,18 @@
 @font-face {
 	font-family: "Gentium Basic";
-	src: url(./GenBasR.ttf);
+	src: url(./GenBasR.ttf) format("truetype");
 }
 @font-face {
-	font-family: "Gentium Basic Italic";
-	src: url(./GenBasI.ttf);
+	font-family: "Gentium Basic";
+	src: url(./GenBasI.ttf) format("truetype");
+	font-style: italic;
 }
+/* Disabled since does not really look that great. */
+/*@font-face {
+	font-family: "Gentium Basic";
+	src: url(./GenBasB.ttf) format("truetype");
+	font-weight: bold;
+}*/
 
 
 body {
@@ -41,6 +48,7 @@ header h1 {
 	text-align: right;
 }
 header h1, header h1 * {
+	border: none;
 	color: #d4d4d4;
 	text-decoration: none;
 }
@@ -71,6 +79,7 @@ nav ul {
 	padding: 0;
 }
 nav a {
+	border: none;
 	color: #828282;
 	text-decoration: none;
 }
@@ -80,8 +89,9 @@ nav ul li {
 	border-top: none;
 	display: block;
 	float: left;
+	height: 1.5em;
 	margin-right: -1px;
-	padding: 2px .8em;
+	padding: 8px .8em 0;
 }
 nav ul li:first-child {
 	border-bottom-left-radius: 8px;
@@ -106,7 +116,7 @@ h2 {
 	padding: 0;
 }
 
-#content p a {
+a {
 	color: #90f442;
 	text-decoration: none;
 	border-bottom: 1px dotted #90f442;
@@ -114,6 +124,6 @@ h2 {
 
 footer p {
 	font-size: .8em;
-	font-family: "Gentium Basic Italic", serif;
+	font-style: italic;
 	text-align: center;
 }
