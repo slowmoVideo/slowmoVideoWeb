@@ -12,3 +12,7 @@ These parts are used by slowmoVideo:
 * [http://qt.nokia.com/ Qt4] as C++ programming framework
 * [http://www.inf.ethz.ch/personal/chzach/opensource.html GPU-KLT+FLOW] for calculating the optical flow
 * [http://ffmpeg.org/ ffmpeg] for reading and writing video files
+
+=== Features ===
+* Videos in any format supported by ffmpeg can be loaded. Image sequences can also be loaded, so, if you did a timelapse with too few frames, slowmoVideo may help as well.
+* slowmoVideo does not work with a constant slowdown factor but with curves that allow arbitrary time accelereation/deceleration/reversal.
