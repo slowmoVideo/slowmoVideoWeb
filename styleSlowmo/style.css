@@ -130,21 +130,33 @@ a {
 figure {
 	border: 1px solid #828282;
 	border-radius: 10px;
-	float: right;
-	margin: .5em 0 .5em .5em;
 	position: relative;
-	width: 298px;
 }
 figure a {
 	border: none;
 }
-figure img {
+figure.imgThumb {
+	float: right;
+	margin: .5em 0 .5em .5em;
+	width: 298px;
+}
+figure.imgthumb img {
 	margin-top: -1px;
 	margin-left: -1px;
 	width: 300px;
 }
-figure figcaption {
+figure.imgthumb figcaption {
 	padding: 0 .5em;
+}
+figure.code {
+	margin: 1em 0 1em 40px;
+	padding: 1em;
+	white-space: pre-wrap;
+}
+figure.code figcaption {
+	position: absolute;
+	bottom: 2px;
+	right: 5px;
 }
 
 footer p {

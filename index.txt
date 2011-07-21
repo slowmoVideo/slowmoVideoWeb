@@ -7,6 +7,9 @@ But it does not simply make your videos play at 0.01× speed. You can ''smoothly
 
 How does slow motion work? slowmoVideo tries to find out where pixels move in the video (this information is called ''Optical Flow''), and then uses this information to calculate the additional frames.
 
+=== Maintainers/Packagers wanted ===
+Ubuntu packages are on its way already. I'd love to see other distributions as well! If you can build packages for yours, please [[mailto:simon.eu@gmail.com drop me a message]].
+
 === Technologies ===
 These parts are used by slowmoVideo:
 * [http://qt.nokia.com/ Qt4] as C++ programming framework

@@ -7,8 +7,30 @@ The Optical Flow library used by slowmoVideo (GPU-KLT+FLOW requires an ''nVidia 
 Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports are planned for the time after August. I’m thinking about accepting donations for these ports since I personally do not need them.
 
 === Download ===
-All available files are listed [[builds/ here]]. The last ones are:
-* [[builds/slowmoVideo-0.1-Linux-64-bit-Jul18.tar.bz2 slowmoVideo 0.1 64-bit]], Linux (Jul 18)
-* [[builds/slowmoVideo-0.1-Linux-32-bit-Jul18.tar.bz2 slowmoVideo-0.1 32-bit]], Linux (Jul 18)
-The source code will soon be available as well. 
+The available source tarballs are listed [[builds/ here]]. (Please ignore the binaries, they will most likely only work if your system looks exactly as mine does.) The most recent one (at least at the point in time when this paragraph was written) is [[http://slowmovideo.granjow.net/builds/slowmoVideo-v0.1+6f864af.tar.bz2 this one]].
 
+=== Compiling ===
+First you may have to resolve some dependencies. CMake will most likely inform you about missing packages as well, just in case some are missing here.
+* slowmoVideo requires ffmpeg (libavcodec, libswscale) and the Qt4 libraries
+* The V3D (GPU-KLT+FLOW) library requires glut, glew, and the [http://developer.nvidia.com/cg-toolkit-download Cg toolkit]. 
+
+First slomoVideo needs to be compiled. Note that currently the $$make install$$ only installs slowmoVideo to the project directory $$/install$$ and not to your root.
+$$((title=slowmoVideo compiling))
+$ cd slowmoVideo
+$ mkdir build 
+$ cd build
+$ cmake ..
+$ make -j3
+$ make install
+$$
+Then compile V3D which works pretty much the same way:
+$$((title=V3D compiling))
+$ cd V3D
+$ mkdir build 
+$ cd build
+$ cmake ..
+$ make -j3
+$ make install
+$$
+
+If all of this worked, you should be able to run $$install/bin/slowmoUI$$. If not, you can drop me a message on [https://plus.google.com/108007897734481705775 Google+].

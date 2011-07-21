@@ -1,0 +1,6 @@
+{{#if:{{{isBlock|}}}|
+<figure class="code"{{#if:{{{id|}}}| id="{{{id}}}"}}>
+{{#if:{{{title|}}}|<figcaption>{{{title}}}</figcaption>
+}}<p>{{{text}}}</p>
+</figure>
+|<code>{{{text}}}</code>}}
