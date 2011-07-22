@@ -4,3 +4,4 @@
 {{Title: .:: slowmoVideo.granjow.net}}
 {{Namespace:w=http://de.wikipedia.org/wiki/%s|cut}}
 {{Namespace:w:de=http://en.wikipedia.org/wiki/%s|cut}}
+{{Thumbnails:thumbs/thumb_%f}}

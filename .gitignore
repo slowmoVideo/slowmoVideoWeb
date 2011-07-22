@@ -1,2 +1,9 @@
+# Wildcards
+*~
+
+# Files
 .wiki2xhtml-hashes
+
+# Directories
 html
+thumbs

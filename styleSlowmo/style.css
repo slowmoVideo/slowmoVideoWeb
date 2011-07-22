@@ -140,12 +140,12 @@ figure.imgThumb {
 	margin: .5em 0 .5em .5em;
 	width: 298px;
 }
-figure.imgthumb img {
+figure.imgThumb img {
 	margin-top: -1px;
 	margin-left: -1px;
 	width: 300px;
 }
-figure.imgthumb figcaption {
+figure.imgThumb figcaption {
 	padding: 0 .5em;
 }
 figure.code {

@@ -9,6 +9,8 @@ Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports are planned 
 === Download ===
 The available source tarballs are listed [[builds/ here]]. (Please ignore the binaries, they will most likely only work if your system looks exactly as mine does.) The most recent one (at least at the point in time when this paragraph was written) is [[http://slowmovideo.granjow.net/builds/slowmoVideo-v0.1+6f864af.tar.bz2 this one]].
 
+The read-only git repository is here: $$git://granjow.net/slowmoVideo.git$$
+
 === Compiling ===
 First you may have to resolve some dependencies. CMake will most likely inform you about missing packages as well, just in case some are missing here.
 * slowmoVideo requires ffmpeg (libavcodec, libswscale) and the Qt4 libraries
