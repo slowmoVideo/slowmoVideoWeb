@@ -149,9 +149,13 @@ figure.imgThumb figcaption {
 	padding: 0 .5em;
 }
 figure.code {
+	background-color: #222;
 	margin: 1em 0 1em 40px;
 	padding: 1em;
+}
+figure.code p {
 	white-space: pre-wrap;
+	margin-top: .5em;
 }
 figure.code figcaption {
 	position: absolute;
