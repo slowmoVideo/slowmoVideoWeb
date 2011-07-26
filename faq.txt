@@ -1,0 +1,10 @@
+
+
+===== How can I get rid of that GPU TV-L1 window? =====
+You cannot. This is the optical flow generator, which uses GLUT, which requires a window, which is shown each time optical flow has to be calculated.
+
+To kind of get rid of it in KDE4 you can add a window rule (in $$systemsettings$$, menu point ''window behaviour'') to always open it on e.g. desktop 4 so you can work on the other desktops without constantly losing keyboard focus. Set the window title to exactly match $$GPU TV-L1 Optic Flow$$, and let the window be put on desktop 4 on initialization in the ''Geometry'' tab.
+
+
+===== Sometimes my mouse freezes. Why? =====
+This is when your GPU is doing heavy work and does not have time for updating the screen. Nothing dangerous.
