@@ -5,6 +5,15 @@ You cannot. This is the optical flow generator, which uses GLUT, which requires 
 
 To kind of get rid of it in KDE4 you can add a window rule (in $$systemsettings$$, menu point ''window behaviour'') to always open it on e.g. desktop 4 so you can work on the other desktops without constantly losing keyboard focus. Set the window title to exactly match $$GPU TV-L1 Optic Flow$$, and let the window be put on desktop 4 on initialization in the ''Geometry'' tab.
 
+If you have a hint on how to do this on other desktops, please drop me an e-mail.
+
 
 ===== Sometimes my mouse freezes. Why? =====
 This is when your GPU is doing heavy work and does not have time for updating the screen. Nothing dangerous.
+
+===== What are those QColor::fromRgbF error message? =====
+If your debug output is flooded with messages saying $$QColor::fromRgbF: RGB parameters out of range$$ then this is a result of tiniest floating point inaccuracy resulting in:
+$$
+x + (1.0-x) > 1.0
+$$
+

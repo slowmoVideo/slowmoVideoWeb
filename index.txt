@@ -19,3 +19,6 @@ These parts are used by slowmoVideo:
 === Features ===
 * Videos in any format supported by ffmpeg can be loaded. Image sequences can also be loaded, so, if you did a timelapse with too few frames, slowmoVideo may help as well.
 * slowmoVideo does not work with a constant slowdown factor but with curves that allow arbitrary time accelereation/deceleration/reversal.
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<g:plusone size="small"></g:plusone>
