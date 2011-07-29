@@ -2,4 +2,5 @@
 * Download, download.html
 * Videos, videos.html
 * Documentation, docs.html
+* FAQ, faq.html
 * granjow.net, http://granjow.net

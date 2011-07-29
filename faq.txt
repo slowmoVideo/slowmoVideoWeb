@@ -16,4 +16,4 @@ If your debug output is flooded with messages saying $$QColor::fromRgbF: RGB par
 $$
 x + (1.0-x) > 1.0
 $$
-
+These can be safely ignored.
