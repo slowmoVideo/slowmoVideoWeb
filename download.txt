@@ -36,4 +36,4 @@ $ make -j3
 $ make install
 $$
 
-If all of this worked, you should be able to run $$install/bin/slowmoUI$$. If not, you can drop me a message on [https://plus.google.com/108007897734481705775 Google+].
+If all of this worked, you should be able to run $$install/bin/slowmoUI$$. If not, you can drop me a message on [https://plus.google.com/108007897734481705775 Google+] (send me a message if you need an invitation).

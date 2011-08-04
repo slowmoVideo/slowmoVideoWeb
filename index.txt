@@ -3,12 +3,14 @@
 
 slowmoVideo is an OpenSource program that creates slow-motion videos from your footage. 
 
-But it does not simply make your videos play at 0.01× speed. You can ''smoothly slow down and speed up your footage.''
+But it does not simply make your videos play at 0.01× speed. You can ''smoothly slow down and speed up your footage,'' optionally with motion blur.
 
 How does slow motion work? slowmoVideo tries to find out where pixels move in the video (this information is called ''Optical Flow''), and then uses this information to calculate the additional frames.
 
-=== Maintainers/Packagers wanted ===
-Ubuntu packages are on its way already. I'd love to see other distributions as well! If you can build packages for yours, please [[mailto:simon.eu@gmail.com drop me a message]].
+=== Features ===
+* Videos in any format supported by '''ffmpeg''' can be loaded. Image sequences can also be loaded, so, if you did a timelapse with too few frames, slowmoVideo may help as well.
+* slowmoVideo does not work with a constant '''slowdown''' factor but with curves that allow arbitrary time accelereation/deceleration/reversal.
+* '''Motion blur'' can be added, as much as you want.
 
 === Technologies ===
 These parts are used by slowmoVideo:
@@ -16,9 +18,3 @@ These parts are used by slowmoVideo:
 * [http://www.inf.ethz.ch/personal/chzach/opensource.html GPU-KLT+FLOW] for calculating the optical flow
 * [http://ffmpeg.org/ ffmpeg] for reading and writing video files
 
-=== Features ===
-* Videos in any format supported by ffmpeg can be loaded. Image sequences can also be loaded, so, if you did a timelapse with too few frames, slowmoVideo may help as well.
-* slowmoVideo does not work with a constant slowdown factor but with curves that allow arbitrary time accelereation/deceleration/reversal.
-
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<g:plusone size="small"></g:plusone>

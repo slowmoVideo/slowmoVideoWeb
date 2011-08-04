@@ -3,4 +3,4 @@
 {{#if:{{{title|}}}|<figcaption>{{{title}}}</figcaption>
 }}<p>{{{text}}}</p>
 </figure>
-|<code>{{{text}}}</code>}}
+|<code class="codeInline">{{{text}}}</code>}}

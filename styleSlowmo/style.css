@@ -136,6 +136,7 @@ figure a {
 	border: none;
 }
 figure.imgThumb {
+	background-color: #222;
 	float: right;
 	margin: .5em 0 .5em .5em;
 	width: 298px;
@@ -163,8 +164,19 @@ figure.code figcaption {
 	right: 5px;
 }
 
+.codeInline {
+	background-color: #222;
+	padding: 2px;
+}
+
 footer p {
 	font-size: .8em;
 	font-style: italic;
 	text-align: center;
+}
+
+
+#___plusone_0 {
+	position: absolute;
+	top: 90px;
 }

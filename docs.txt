@@ -22,8 +22,19 @@ The monitor at the top (can be dragged around, by the way, it's a Qt4 widget) di
 slowmoVideo also supports ''Bézier curves''. A segment can be changed from linear to Bézier (and the other way round) by right-clicking on it. You will notice that the handles cannot be moved: This is wrong however. Nodes have priority, but by holding $$Shift$$ they are ignored. This is how you can drag them and create a wonderful smooth curve.
 
 
+=== Motion blur ===
+[[Image:pngGUI/shutterFunction.png|thumb|180&thinsp;° shutter]]
+To add motion blur on a segment (the line between two nodes), right-click on it and select ''Set/edit shutter function''. The function can use several parameters; the most important one is the number of frames per second. For a film-like 180 degree shutter<ref>See e.g. [http://blog.tylerginter.com/?p=385 180 Degree Shutter – Learn It, Live It, Love It] for an explanation of the 180&thinsp;° shutter.</ref>, which is half the frame time, you would enter $$return 0.5 * 1/fps;$$ – for 24 frames per second this would return <code>0.5 * 1/24 s = 1/48 s</code>.
+
+If you are a coder – this is QtScript which is mainly ECMAScript (JavaScript). 
+
+
 === Rendering ===
 [[Image:pngGUI/renderDialog.png|thumb|Rendering dialog]]
 Finally you will want to render your project. Why all the colours, you may wonder? Green indicates correct values, red indicates invalid values. When rendering to images, the filename pattern must contain a $$%1$$ (which will be replaced by the frame number), otherwise the field will be red and you cannot start rendering. (Try it!)
 
 Since rendering is a time-consuming process, you might want to render with the small resolution first and check if you like the result. If you do, chose the original frame size and go have a big lunch since it will take some time :)
+
+
+=== Links ===
+<references/>
