@@ -1,6 +1,8 @@
 {{Title:Slow-motion videos %s}}
 {{H1:Videos}}
 
+<iframe src="http://player.vimeo.com/video/27453655?title=0&amp;byline=0&amp;portrait=0" width="660" height="371" frameborder="0"></iframe><p><a href="http://vimeo.com/27453655">Short dream – Hair in slow-motion</a> from <a href="http://vimeo.com/granjow">Simon A. Eugster</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
 <iframe src="http://player.vimeo.com/video/27406291?title=0&amp;byline=0&amp;portrait=0" width="660" height="371" frameborder="0"></iframe><p><a href="http://vimeo.com/27406291">slowmoVideo - Simulating motion blur in a time lapse</a> from <a href="http://vimeo.com/granjow">Simon A. Eugster</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 
 <iframe src="http://player.vimeo.com/video/26733856?title=0&amp;byline=0&amp;portrait=0" width="660" height="371" frameborder="0"></iframe><p><a href="http://vimeo.com/26733856">imagine you could stop time</a> from <a href="http://vimeo.com/granjow">Simon A. Eugster</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
