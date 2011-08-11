@@ -10,7 +10,7 @@ How does slow motion work? slowmoVideo tries to find out where pixels move in th
 === Features ===
 * Videos in any format supported by '''ffmpeg''' can be loaded. Image sequences can also be loaded, so, if you did a timelapse with too few frames, slowmoVideo may help as well.
 * slowmoVideo does not work with a constant '''slowdown''' factor but with curves that allow arbitrary time accelereation/deceleration/reversal.
-* '''Motion blur'' can be added, as much as you want.
+* '''Motion blur''' can be added, as much as you want.
 The most recent changes to slowmoVideo can be read in the [[changelog.txt changelog]].
 
 === Technologies ===
