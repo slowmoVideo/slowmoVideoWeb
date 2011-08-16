@@ -7,7 +7,7 @@ The Optical Flow library used by slowmoVideo (GPU-KLT+FLOW requires an ''nVidia 
 Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports are planned for the time after August. I’m thinking about accepting donations for these ports since I personally do not need them.
 
 === Download ===
-The available source tarballs and Ubuntu packages are listed [[builds/ here]]. (Please ignore the binaries, they will most likely only work if your system looks exactly as mine does.) The most recent one (at least at the point in time when this paragraph was written) is [[http://slowmovideo.granjow.net/builds/slowmoVideo-v0.1+6f864af.tar.bz2 this one]].
+The most recent source tarballs and Ubuntu packages are listed [[builds/ here]]. 
 
 The read-only git repository is: $$git://granjow.net/slowmoVideo.git$$
 
