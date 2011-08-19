@@ -19,3 +19,5 @@ These parts are used by slowmoVideo:
 * [http://www.inf.ethz.ch/personal/chzach/opensource.html GPU-KLT+FLOW] for calculating the optical flow
 * [http://ffmpeg.org/ ffmpeg] for reading and writing video files
 
+=== Thesis ===
+I wrote slowmoVideo as my bachelor thesis at ETH Zurich. The thesis can be read [[resources/slowmoVideo.pdf here]] (PDF, 2 MB).
