@@ -13,9 +13,29 @@ The read-only git repository is: $$git://granjow.net/slowmoVideo.git$$
 
 === Compiling ===
 First you may have to resolve some dependencies. CMake will most likely inform you about missing packages as well, just in case some are missing here.
-* slowmoVideo requires ffmpeg ($$libavformat-dev libavcodec-dev libswscale-dev$$) and the Qt4 libraries
-* The V3D (GPU-KLT+FLOW) library requires $$libglut3-dev libglew1.5-dev libcv-dev libsdl1.2-dev libjpeg-dev libcvaux-dev libhighgui-dev$$ and the [http://developer.nvidia.com/cg-toolkit-download Cg toolkit]. 
-* Additionally for compiling you need (at least on debian-based systems): $$git cmake libqt4-dev$$
+* slowmoVideo requires ffmpeg with the avformat/avcodec/swscale libraries and the Qt4 libraries
+* The V3D (GPU-KLT+FLOW) library requires $$$$ and the [http://developer.nvidia.com/cg-toolkit-download Cg toolkit]. 
+* Additionally for compiling you need (at least on debian-based systems) cmake, g++, and git.
+
+Some distribution specific installation instructions (without the Cg toolkit):
+{{:tplSec.txt|
+==== Debian/Ubuntu ====
+$$
+apt-get install build-essentials cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev libglut3-dev libglew1.5-dev libcv-dev libsdl1.2-dev libjpeg-dev libcvaux-dev libhighgui-dev
+$$
+}}
+
+{{:tplSec.txt|
+==== Fedora ====
+For ffmpeg you may need to add the rpmfusion repository first, as explained [http://rpmfusion.org/Configuration/ here].
+
+$$
+yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++
+$$
+
+V3D needs: opencv-devel glew-devel glut-devel SDL-devel plus some more (cv(aux), highgui).
+
+}}
 
 First slomoVideo needs to be compiled. Note that currently the $$make install$$ only installs slowmoVideo to the project directory $$/install$$ and not to your root.
 $$((title=slowmoVideo compiling))

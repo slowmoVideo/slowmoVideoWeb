@@ -155,8 +155,9 @@ figure.code {
 	padding: 1em;
 }
 figure.code p {
-	white-space: pre-wrap;
+	font-family: monospace;
 	margin-top: .5em;
+	white-space: pre-wrap;
 }
 figure.code figcaption {
 	position: absolute;
@@ -167,6 +168,12 @@ figure.code figcaption {
 .codeInline {
 	background-color: #222;
 	padding: 2px;
+}
+
+section.subsection {
+	border-left: 2px solid #d4d4d4;
+	margin-left: 10px;
+	padding-left: 10px;
 }
 
 footer p {
