@@ -2,12 +2,14 @@
 {{H1:FAQ}}
 
 ===== Where can I get support? =====
-Please use [https://plus.google.com/108007897734481705775 Google+]. I can send you an invitation to Google+ if you need one (send me an [[mailto:simon.eu@gmail.com e-mail]]).
+Please use [https://plus.google.com/108007897734481705775 Google+]. To get an invitation for Google+ click [https://plus.google.com/i/c__qdqKpvBE:kqUnETXFF6Y this link].
 
 ===== How can I get rid of that GPU TV-L1 window? =====
 You cannot. This is the optical flow generator, which uses GLUT, which requires a window, which is shown each time optical flow has to be calculated.
 
 To kind of get rid of it in KDE4 you can add a window rule (in $$systemsettings$$, menu point ''window behaviour'') to always open it on e.g. desktop 4 so you can work on the other desktops without constantly losing keyboard focus. Set the window title to exactly match $$GPU TV-L1 Optic Flow$$, and let the window be put on desktop 4 on initialization in the ''Geometry'' tab.
+
+On Gnome chose «always on top» for the window you currently work in.
 
 If you have a hint on how to do this on other desktops, please drop me an e-mail.
 
