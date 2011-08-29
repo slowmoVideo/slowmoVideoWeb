@@ -173,6 +173,7 @@ figure.code figcaption {
 section.subsection {
 	border-left: 2px solid #d4d4d4;
 	margin-left: 10px;
+	margin-bottom: 2em;
 	padding-left: 10px;
 }
 
