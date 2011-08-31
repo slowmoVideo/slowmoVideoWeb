@@ -11,6 +11,8 @@ To kind of get rid of it in KDE4 you can add a window rule (in $$systemsettings$
 
 On Gnome chose «always on top» for the window you currently work in.
 
+With Compiz follow [http://www.webupd8.org/2010/08/how-to-make-application-always-open-on.html this guide].
+
 If you have a hint on how to do this on other desktops, please drop me an e-mail.
 
 
