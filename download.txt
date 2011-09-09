@@ -21,7 +21,7 @@ Some distribution specific installation instructions (without the Cg toolkit):
 {{:tplSec.txt|
 ==== Debian/Ubuntu ====
 $$
-apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev libglut3-dev libglew1.5-dev libcv-dev libsdl1.2-dev libjpeg-dev libcvaux-dev libhighgui-dev
+apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev libglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev 
 $$
 }}
 
@@ -30,7 +30,7 @@ $$
 For ffmpeg you may need to add the rpmfusion repository first, as explained [http://rpmfusion.org/Configuration/ here].
 
 $$
-yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++ opencv-devel glew-devel glut-devel SDL-devel
+yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++ glew-devel glut-devel SDL-devel
 $$
 }}
 
@@ -39,7 +39,7 @@ $$
 As with Fedora an additional repository is required for ffmpeg, [http://en.opensuse.org/Additional_package_repositories#Packman Packman].
 
 $$
-zypper in cmake ffmpeg libffmpeg-devel git libqt4-devel gcc-c++ opencv-devel glew-devel freeglut-devel libSDL-devel
+zypper in cmake ffmpeg libffmpeg-devel git libqt4-devel gcc-c++ glew-devel freeglut-devel libSDL-devel
 $$
 }}
 
