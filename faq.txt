@@ -9,6 +9,13 @@ If building does not work, here are two points to check:
 # Does cmake complain about a missing component although you installed it in the meantime? CMake uses a cache which sometimes does not get updated. Clear the whole build directory and run cmake again. (This is a good idea for other problems as well by the way.)
 
 
+
+=== Rendering ===
+===== I have rendering issues. =====
+# You may want to try a lower lambda value (5 or 10) in the rendering dialog. 
+# Alternatively you can manually fix the optical flow with slowmoFlowEdit, a short tutorial is [http://www.youtube.com/watch?v=aLtIvEiDD2k here]. This is often a good solution if you are sure that you want to use a clip of your video and need to remove some errors.
+
+
 === slowmoUI ===
 
 ===== I get flow builder errors. =====

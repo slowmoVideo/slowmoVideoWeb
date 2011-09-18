@@ -1,6 +1,8 @@
 {{Title:slowmoVideo %s}}
 {{H1:Welcome}}
 
+{{Bind:canonical=<link rel="canonical" href="http://slowmoVideo.granjow.net"/>}}
+
 slowmoVideo is an OpenSource program that creates slow-motion videos from your footage. 
 
 But it does not simply make your videos play at 0.01× speed. You can ''smoothly slow down and speed up your footage,'' optionally with motion blur.
