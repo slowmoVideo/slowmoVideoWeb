@@ -38,5 +38,11 @@ Finally you will want to render your project. Why all the colours, you may wonde
 Since rendering is a time-consuming process, you might want to render with the small resolution first and check if you like the result. If you do, chose the original frame size and go have a big lunch since it will take some time :)
 
 
+=== Flow editing ===
+Some rendering artifacts can be removed by editing the optical flow.
+
+<nowiki><iframe width="560" height="315" src="http://www.youtube.com/embed/aLtIvEiDD2k" frameborder="0" allowfullscreen></iframe></nowiki>
+
+
 === Links ===
 <references/>

@@ -183,6 +183,11 @@ footer p {
 	text-align: center;
 }
 
+td, th {
+	padding-right: 1em;
+	text-align: left;
+}
+
 
 #___plusone_0 {
 	position: absolute;
