@@ -21,7 +21,7 @@ Some distribution specific installation instructions (without the Cg toolkit):
 {{:tplSec.txt|
 ==== Debian/Ubuntu ====
 $$
-apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev libglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev 
+apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev 
 $$
 }}
 
