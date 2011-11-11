@@ -1,33 +1,6 @@
 {{Bind:php=<?php
 
-  function getDirectoryList ($directory) 
-  {
-
-    // create an array to hold directory list
-    $results = array();
-
-    // create a handler for the directory
-    $handler = opendir($directory);
-
-    // open directory and walk through the filenames
-    while ($file = readdir($handler)) {
-
-      // if file isn't this directory or its parent, add it to the results
-      if ($file != "." && $file != "..") {
-        $results[] = $file;
-      }
-
-    }
-
-    // tidy up: close the handler
-    closedir($handler);
-
-    // done!
-    return $results;
-
-  }
-
-function builds_fileList($dir = 'builds')
+function builds_fileList($suffix = '', $dir = 'builds')
 {
   $fileList = array();
   $files = scandir($dir);
@@ -47,7 +20,9 @@ function builds_fileList($dir = 'builds')
     );
     
     if (is_file($f)) {
-      $fileList[filectime($f) . md5($f)] = $fileInfo;
+        if ( strlen($suffix) == 0
+            || substr_compare($f, $suffix, -strlen($suffix)) == 0 )
+        $fileList[filectime($f) . md5($f)] = $fileInfo;
     }
   }
   krsort($fileList);
@@ -79,8 +54,18 @@ EOF;
 {{Title:Builds %s}}
 {{H1:Builds and tarballs}}
 
+=== Source Tarball ===
+Source packages. The compile instructions can be found on the [[download.php Download]] page. 
 <nowiki>
 <?php
-builds_fileList(); 
+builds_fileList('.bz2'); 
+?>
+</nowiki>
+
+=== Ubuntu .deb packages ===
+The <code>.deb</code> packages for Ubuntu are maintained by Benoit Rousselle.
+<nowiki>
+<?php
+builds_fileList('.deb'); 
 ?>
 </nowiki>
