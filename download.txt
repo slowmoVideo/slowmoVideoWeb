@@ -1,23 +1,34 @@
 {{Title:Download slowmoVideo %s}}
 {{H1:Download}}
 
+
 === Requirements ===
 The Optical Flow library used by slowmoVideo (GPU-KLT+FLOW requires an ''nVidia card''. I cannot change this, sorry. If time allows I will add other libraries in future, but don’t count on this. That’s not something I can do in a few minutes.
 
 Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports are planned for the time after August. I’m thinking about accepting donations for these ports since I personally do not need them.
+
 
 === Download ===
 The most recent source tarballs and Ubuntu packages are listed [[builds.php here]]. 
 
 The read-only git repository is: $$git://granjow.net/slowmoVideo.git$$
 
+
 === Compiling ===
 First you may have to resolve some dependencies. CMake will most likely inform you about missing packages as well, just in case some are missing here.
 * slowmoVideo requires ffmpeg with the avformat/avcodec/swscale libraries and the Qt4 libraries
-* The V3D (GPU-KLT+FLOW) library requires the [http://developer.nvidia.com/cg-toolkit-download Cg toolkit]. 
+* The V3D (GPU-KLT+FLOW) library requires the [http://developer.nvidia.com/cg-toolkit-download Cg toolkit]. Direct downloads: 
+** .deb [http://developer.download.nvidia.com/cg/Cg_3.0/Cg-3.0_February2011_x86_64.deb 64bit] / [http://developer.download.nvidia.com/cg/Cg_3.0/Cg-3.0_February2011_x86.deb 32bit]
+** RPM [http://developer.download.nvidia.com/cg/Cg_3.0/Cg-3.0_February2011_x86_64.rpm 64bit] / [http://developer.download.nvidia.com/cg/Cg_3.0/Cg-3.0_February2011_x86.rpm 32bit]
+** Tarball [http://developer.download.nvidia.com/cg/Cg_3.0/Cg-3.0_February2011_x86_64.tgz 64bit] / [http://developer.download.nvidia.com/cg/Cg_3.0/Cg-3.0_February2011_x86.tgz 32bit]
 * Additionally for compiling you need (at least on debian-based systems) cmake, g++, and git.
 
+
+
+
+==== Installing the required packages ====
 Some distribution specific installation instructions (without the Cg toolkit):
+
 {{:tplSec.txt|
 ==== Debian/Ubuntu ====
 $$
@@ -42,6 +53,9 @@ $$
 zypper in cmake ffmpeg libffmpeg-devel git libqt4-devel gcc-c++ glew-devel freeglut-devel libSDL-devel
 $$
 }}
+
+
+==== … and compiling slowmoVideo ====
 
 First slomoVideo needs to be compiled. Note that currently the $$make install$$ only installs slowmoVideo to the project directory $$/install$$ and not to your root.
 $$((title=slowmoVideo compiling))
