@@ -1,34 +1,35 @@
 {{Bind:php=<?php
 
-function builds_fileList($suffix = '', $dir = 'builds')
+function builds_fileList($suffix = '', $filter = '', $dir = 'builds')
 {
-  $fileList = array();
-  $files = scandir($dir);
-  if (!$files) {
-    echo '<p>No files in <em>' . $dir . '</em>.</p>';
-    return;
-  }
-  foreach ($files as $entry) {
-    
+    $fileList = array();
+    $files = scandir($dir);
+    if (!$files) {
+        echo '<p>No files in <em>' . $dir . '</em>.</p>';
+        return;
+    }
+    foreach ($files as $entry) {
+
     $f = $dir . '/' . $entry;
-    
+
     $fileInfo = array(
         '%name%' => $entry,
         '%path%' => $f,
         '%date%' => date('Y-m-d H:i:s', filectime($f)),
         '%size%' => sprintf('%.1f KB', filesize('builds/' . $entry)/1000),
     );
-    
+
     if (is_file($f)) {
-        if ( strlen($suffix) == 0
-            || substr_compare($f, $suffix, -strlen($suffix)) == 0 )
-        $fileList[filectime($f) . md5($f)] = $fileInfo;
+        if ( strlen($suffix) == 0 || substr_compare($f, $suffix, -strlen($suffix)) == 0 )
+            if ( strlen($filter) == 0 || strpos($f, $filter) !== false ) {
+                $fileList[filectime($f) . md5($f)] = $fileInfo;
+            }
+        }
     }
-  }
-  krsort($fileList);
-  
-  $line = '      <tr><td><a href="%path%">%name%</a></td><td>%date%</td><td>%size%</td></tr>' . "\n";
-  echo <<<EOF
+    krsort($fileList);
+
+    $line = '      <tr><td><a href="%path%">%name%</a></td><td>%date%</td><td>%size%</td></tr>' . "\n";
+    echo <<<EOF
   <table>
     <thead>
       <th>File</th>
@@ -66,8 +67,17 @@ builds_fileList('.bz2');
 
 === Ubuntu .deb packages ===
 The <code>.deb</code> packages for Ubuntu are maintained by Benoit Rousselle.
+
+32-bit packages:
 <nowiki>
 <?php
-builds_fileList('.deb'); 
+builds_fileList('.deb', 'i386'); 
+?>
+</nowiki>
+
+64-bit packages:
+<nowiki>
+<?php
+builds_fileList('.deb', 'amd64'); 
 ?>
 </nowiki>
