@@ -41,7 +41,7 @@ $$
 For ffmpeg you may need to add the rpmfusion repository first, as explained [http://rpmfusion.org/Configuration/ here].
 
 $$
-yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++ glew-devel glut-devel SDL-devel
+yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++ glew-devel glut-devel SDL-devel libpng-devel libjpeg-devel
 $$
 }}
 
