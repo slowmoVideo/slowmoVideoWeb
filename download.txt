@@ -3,9 +3,9 @@
 
 
 === Requirements ===
-The Optical Flow library used by slowmoVideo (GPU-KLT+FLOW requires an ''nVidia card''. I cannot change this, sorry. If time allows I will add other libraries in future, but don’t count on this. That’s not something I can do in a few minutes.
+<em class="update">Update:</em> slowmoVideo now has a CPU version of the flow builder, therefore <em class="update">nVidia cards are not mandatory anymore!</em> The CPU version is based on OpenCV. The GPU version (nVidia only) uses GPU-KLT+FLOW (V3D) and is slightly more accurate.
 
-Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports are planned for the time after August. I’m thinking about accepting donations for these ports since I personally do not need them.
+Currently slowmoVideo runs on ''Linux only''. OSX and Windows ports should be possible now with the CPU based Optical Flow version. If you feel like giving it a try, please let me know so that changes can be integrated back into the git repository.
 
 
 === Download ===
@@ -29,7 +29,7 @@ Some distribution specific installation instructions (without the Cg toolkit):
 {{:tplSec.txt|
 ==== Debian/Ubuntu ====
 $$
-apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev 
+apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev
 $$
 And on Ubuntu 12.04 LTS you can directly install Cg:
 $$
@@ -42,7 +42,7 @@ $$
 For ffmpeg you may need to add the rpmfusion repository first, as explained [http://rpmfusion.org/Configuration/ here].
 
 $$
-yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++ glew-devel glut-devel SDL-devel libpng-devel libjpeg-devel
+yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++ glew-devel glut-devel SDL-devel libpng-devel libjpeg-devel opencv-devel
 $$
 }}
 
@@ -51,7 +51,7 @@ $$
 As with Fedora an additional repository is required for ffmpeg, [http://en.opensuse.org/Additional_package_repositories#Packman Packman].
 
 $$
-zypper in cmake ffmpeg libffmpeg-devel git libqt4-devel gcc-c++ glew-devel freeglut-devel libSDL-devel
+zypper in cmake ffmpeg libffmpeg-devel git libqt4-devel gcc-c++ glew-devel freeglut-devel libSDL-devel opencv-devel
 $$
 }}
 
@@ -67,7 +67,7 @@ $ cmake ..
 $ make -j3
 $ make install
 $$
-Then compile V3D which works pretty much the same way:
+Then compile V3D which works pretty much the same way: (Only if you have an nVidia card)
 $$((title=V3D compiling))
 $ cd V3D
 $ mkdir build 

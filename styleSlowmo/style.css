@@ -209,3 +209,7 @@ td, th {
 	position: absolute;
 	top: 90px;
 }
+
+em.update {
+	color: #90f442;
+}
