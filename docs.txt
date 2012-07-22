@@ -1,6 +1,8 @@
 {{Title:Documentation for %s}}
 {{H1:Documentation}}
 
+''Article en Français:'' [http://artdoeuvre.org/recette/slowmovideo-ou-comment-arr%C3%AAter-le-temps  slowmoVideo, ou comment arrêter le temps]
+
 ''slowmoUI'' (the user interface for slowmoVideo) supports normal shortcuts via the menu and additional shortcuts that can be displayed by presshing $$h$$. Combined shortcuts like ''Save as (s-a)'' are triggered by typing $$sa$$. If you wait longer than about half a second between two key strokes, the shortcut status will be reset.
 
 === New project ===
