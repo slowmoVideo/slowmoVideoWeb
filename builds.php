@@ -1,5 +1,7 @@
 {{Bind:php=<?php
 
+date_default_timezone_set('UTC');
+
 function builds_fileList($suffix = '', $filter = '', $dir = 'builds')
 {
     $fileList = array();
@@ -79,5 +81,14 @@ builds_fileList('.deb', 'i386');
 <nowiki>
 <?php
 builds_fileList('.deb', 'amd64'); 
+?>
+</nowiki>
+
+
+=== Windows executables ===
+You additionally need to download ffmpeg.exe to $$C:\WINDOWS\system32\$$. Take the ''32-bit Builds (Static)'' from [http://ffmpeg.zeranoe.com/builds/ Zeranoe].
+<nowiki>
+<?php
+builds_fileList('.exe');
 ?>
 </nowiki>
