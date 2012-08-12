@@ -1,0 +1,10 @@
+{{#if:{{{isBlock}}}|
+<div id="toc">
+{{{text}}}
+</div><br style="clear: left;" />
+|
+  {{#ifeq:{{{level}}}|3||
+* [[#{{{id}}} {{{text}}}]]
+  }}
+
+}} 

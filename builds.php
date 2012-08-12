@@ -59,6 +59,8 @@ EOF;
 
 To get an idea of what has changed in the files listed below, you may want to take a look at slowmoVideo’s [[changelog.txt changelog]].
 
+{{:tplTOC.txt}}
+
 === Source Tarballs ===
 Source packages. The compile instructions can be found on the [[download.html Download]] page. 
 <nowiki>
