@@ -2,6 +2,7 @@ args=-s styleSlowmo -m menu.txt -c config.txt -o html --sitemap=http://slowmoVid
 
 dir=.
 index.txt
+contribute.txt
 download.txt
 docs.txt
 faq.txt

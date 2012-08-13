@@ -1,26 +1,24 @@
 {{Title:Download slowmoVideo %s}}
 {{H1:Download}}
 
-
-=== Requirements ===
-<em class="update">Update 2:</em> slowmoVideo is now also <em class="update">available for Windows!</em>
-
-<em class="update">Update:</em> slowmoVideo now has a CPU version of the flow builder, therefore <em class="update">nVidia cards are not mandatory anymore!</em> The CPU version is based on OpenCV. The GPU version (nVidia only) uses GPU-KLT+FLOW (V3D) and is slightly more accurate.
-
-An OS X port should not be too difficult anymore. If you feel like giving it a try, please let me know so that changes can be integrated back into the git repository. Easiest is to fork the git repository [https://github.com/Granjow/slowmoVideo on github].
-
-
-=== Download ===
 The most recent Ubuntu packages, Windows executables, and source tarballs are listed [[builds.php here]]. 
 
 The read-only git repository is: $$git://granjow.net/slowmoVideo.git$$
 
 
-=== Compiling ===
+=== Requirements ===
+slowmoVideo runs on Linux and on Windows. It comes with two algorithms for calculating the Optical Flow, a CPU based one from OpenCV and a GPU based one from GPU-KLT+FLOW. Latter only runs on an nVidia card, the OpenCV algorithm runs everywhere.
+
+slowmoVideo is not yet available on OS X since the author does not have a Mac. It should compile easily however. [[contribute.html Help is appreciated]] :)
+
+
+== Compiling ==
+''The following instructions are only important for you if you want to develop slowmoVideo or if there is no package for your distribution.''
+
 First you may have to resolve some dependencies. CMake will most likely inform you about missing packages as well, just in case some are missing here.
-* slowmoVideo requires ffmpeg with the avformat/avcodec/swscale libraries and the Qt4 libraries
-* The V3D (GPU-KLT+FLOW) library requires the [http://developer.nvidia.com/cg-toolkit-download Nvidia Cg toolkit].
-* Additionally for compiling you need (at least on debian-based systems) cmake, g++, and git.
+* slowmoVideo requires ffmpeg or libav, the Qt4 libraries, and OpenCV.
+* If you want to use the V3D algorithm running on nVidia cards you have to install their [http://developer.nvidia.com/cg-toolkit-download Cg toolkit] (available in most repositories as well).
+* Additionally for compiling you need cmake, g++, and git.
 
 
 

@@ -1,12 +1,12 @@
 {{Title:Frequently asked questions %s}}
 {{H1:FAQ}}
 
-For questions not covered by this page, please use [https://plus.google.com/108007897734481705775 Google+]. To get an invitation for Google+ click [https://plus.google.com/i/c__qdqKpvBE:kqUnETXFF6Y this link].
+For questions not covered by this page, please use [https://plus.google.com/108007897734481705775 Google+].
 
 === Compiling ===
 If building does not work, here are two points to check:
-# Did you install all listed dependencies? Is cmake maybe complaining about something missing?
-# Does cmake complain about a missing component although you installed it in the meantime? CMake uses a cache which sometimes does not get updated. Clear the whole build directory and run cmake again. (This is a good idea for other problems as well by the way.)
+# Did you install all listed dependencies? Is CMake maybe complaining about something missing?
+# Does CMake complain about a missing component although you installed it in the meantime? CMake uses a cache which sometimes does not get updated. Clear the whole build directory and run cmake again. (This is a good idea for other problems as well by the way.)
 
 
 
