@@ -88,7 +88,7 @@ builds_fileList('.deb', 'amd64');
 
 
 === Windows executables ===
-You additionally need to download ffmpeg.exe to $$C:\WINDOWS\system32\$$. Take the ''32-bit Builds (Static)'' from [http://ffmpeg.zeranoe.com/builds/ Zeranoe].
+You additionally need to download ffmpeg.exe and put it into the same directory as slowmoUI. Take the ''32-bit Builds (Static)'' from [http://ffmpeg.zeranoe.com/builds/ Zeranoe].
 <nowiki>
 <?php
 builds_fileList('.exe');
