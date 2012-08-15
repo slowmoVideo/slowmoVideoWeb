@@ -89,8 +89,17 @@ builds_fileList('.deb', 'amd64');
 
 === Windows executables ===
 You additionally need to download ffmpeg.exe and put it into the same directory as slowmoUI. Take the ''32-bit Builds (Static)'' from [http://ffmpeg.zeranoe.com/builds/ Zeranoe].
+
+Single executables (still needs $$ffmpeg.exe$$):
 <nowiki>
 <?php
 builds_fileList('.exe');
+?>
+</nowiki>
+
+Archives with additionally Flow Editor (still needs $$ffmpeg.exe$$):
+<nowiki>
+<?php
+builds_fileList('', 'win32');
 ?>
 </nowiki>
