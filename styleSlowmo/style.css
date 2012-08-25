@@ -213,3 +213,30 @@ td, th {
 em.update {
 	color: #90f442;
 }
+
+a.download {
+	background: #d4d4d4 url(logoSource.png) no-repeat 10px center;
+	color: #454545;
+	
+	border: 1px solid #d4d4d4;
+	border-radius: 5px;
+	
+	padding: .5em 1em .5em 30px;
+	line-height: 2.5em;
+	
+	margin-right: 1em;
+}
+a.download.windows {
+	background-image: url(logoWindows.png);
+}
+a.download.linux {
+	background-image: url(logoLinux.png);
+}
+a.download.source {
+	background-image: url(logoSource.png);
+}
+
+
+
+
+

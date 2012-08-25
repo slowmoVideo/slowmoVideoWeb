@@ -1,5 +1,5 @@
 * Index, index.html
-* Download, download.html
+* Download, download.php
 * Videos, videos.html
 * Documentation, docs.html
 * Contribute, contribute.html

@@ -1,0 +1,168 @@
+{{Title:Download slowmoVideo %s}}
+{{H1:Download}}
+
+{{Bind:canonical=<link rel="canonical" href="http://slowmoVideo.granjow.net/download.html"/>}}
+
+{{Bind:php=<?php
+
+date_default_timezone_set('UTC');
+
+function newest($suffix = '', $filter = '', $dir = 'builds')
+{
+    $fileList = array();
+    $files = scandir($dir);
+    if (!$files) {
+        echo '<p>No files in <em>' . $dir . '</em>.</p>';
+        return;
+    }
+    foreach ($files as $entry) {
+
+        $f = $dir . '/' . $entry;
+        
+        $fileSizeBits = filesize('builds/' . $entry);
+        if ($fileSizeBits/1024 < 1000) {
+            $fileSize = sprintf('%.0f KB', $fileSizeBits/1024);
+        } else if ($fileSizeBits/1024/1024 < 10) {
+            $fileSize = sprintf('%.1f MB', $fileSizeBits/1024/1024);
+        } else {
+            $fileSize = sprintf('%.0f MB', $fileSizeBits/1024/1024);
+        }
+
+        $fileInfo = array(
+            '%name%' => $entry,
+            '%path%' => $f,
+            '%date%' => date('Y-m-d H:i:s', filectime($f)),
+            '%size%' => $fileSize,
+        );
+
+        if (is_file($f)) {
+            if ( strlen($suffix) == 0 || substr_compare($f, $suffix, -strlen($suffix)) == 0 ) {
+                if ( strlen($filter) == 0 || strpos($f, $filter) !== false ) {
+                    $fileList[filectime($f) . md5($f)] = $fileInfo;
+                }
+            }
+        }
+    }
+    
+    krsort($fileList);
+    
+    if (count($fileList) > 0) {
+        return reset($fileList);
+    } else {
+        return null;
+    }
+}
+
+function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'builds')
+{
+    $first = newest($suffix, $filter, $dir);
+    if ($first == null) {
+        return "";
+    }
+    
+    //print_r($first);
+    
+    $first['%text%'] = $text;
+    $first['%css%'] = $cssClass;
+    return strtr("<a class='download %css%' href='%path%'>%text% (%size%)</a>", $first);
+}
+
+?>
+}}
+
+For Windows you additionally need to download ffmpeg from [http://ffmpeg.zeranoe.com/builds/ Zeranoe] ''(32-bit Builds (Static))'' and extract $$ffmpeg.exe$$ into the same directory as $$slowmoUI.exe$$.
+
+<?php newest('', 'win32'); ?>
+{|
+! Windows
+| <?php echo downloadButton('7z', 'win32', '.7z', 'windows'); ?> <?php echo downloadButton('zip', 'win32', '.zip', 'windows'); ?> <?php echo downloadButton('exe', 'win32', '.exe', 'windows'); ?>
+|-
+! Ubuntu 32-bit
+| <?php echo downloadButton('deb', 'ubuntu12.04_i386', '.deb (12.04 LTS)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu11.10_i386', '.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_i386', '.deb (10.04 LTS)', 'linux'); ?>
+|-
+! Linux 64-bit
+| <?php echo downloadButton('deb', 'ubuntu12.04_amd64', '.deb (12.04 LTS)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu11.10_amd64', '.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_amd64', '.deb (10.04 LTS)', 'linux'); ?>
+|-
+! Sources
+| <?php echo downloadButton('bz2', 'sources', '.bz2', 'sources'); ?> <a href="https://github.com/Granjow/slowmoVideo" class="download source">GitHub</a> <a href="git://granjow.net/slowmoVideo.git" class="download source">git</a>
+|}
+
+Older packages can be found [[builds.php here]].
+
+
+
+
+=== Requirements ===
+slowmoVideo runs on Linux and on Windows. It comes with two algorithms for calculating the Optical Flow, a CPU based one from OpenCV and a GPU based one from GPU-KLT+FLOW. Latter only runs on an nVidia card, the OpenCV algorithm runs everywhere.
+
+The GPU flow program (optional) is called $$flowBuilder$$ and usually produces evidently better results. Is not yet available for Windows.
+
+slowmoVideo is not yet available on OS X since the author does not have a Mac. It should compile easily however. [[contribute.html Help is appreciated]] :)
+
+
+== Compiling ==
+''The following instructions are only important for you if you want to develop slowmoVideo or if there is no package for your distribution.''
+
+First you may have to resolve some dependencies. CMake will most likely inform you about missing packages as well, just in case some are missing here.
+* slowmoVideo requires ffmpeg or libav, the Qt4 libraries, and OpenCV.
+* If you want to use the V3D algorithm running on nVidia cards you have to install their [http://developer.nvidia.com/cg-toolkit-download Cg toolkit] (available in most repositories as well).
+* Additionally for compiling you need cmake, g++, and git.
+
+
+
+
+==== Installing the required packages ====
+Some distribution specific installation instructions (without the Cg toolkit):
+
+{{:tplSec.txt|
+==== Debian/Ubuntu ====
+$$
+apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev
+$$
+And on Ubuntu 12.04 LTS you can directly install Cg:
+$$
+apt-get install nvidia-cg-toolkit
+$$
+}}
+
+{{:tplSec.txt|
+==== Fedora ====
+For ffmpeg you may need to add the rpmfusion repository first, as explained [http://rpmfusion.org/Configuration/ here].
+
+$$
+yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++ glew-devel glut-devel SDL-devel libpng-devel libjpeg-devel opencv-devel
+$$
+}}
+
+{{:tplSec.txt|
+==== openSUSE ====
+As with Fedora an additional repository is required for ffmpeg, [http://en.opensuse.org/Additional_package_repositories#Packman Packman].
+
+$$
+zypper in cmake ffmpeg libffmpeg-devel git libqt4-devel gcc-c++ glew-devel freeglut-devel libSDL-devel opencv-devel
+$$
+}}
+
+
+==== … and compiling slowmoVideo ====
+
+First slomoVideo needs to be compiled. Note that currently the $$make install$$ only installs slowmoVideo to the project directory $$/install$$ and not to your root.
+$$((title=slowmoVideo compiling))
+$ cd slowmoVideo # This is not the project’s root directory but a subdirectory!
+$ mkdir build 
+$ cd build
+$ cmake ..
+$ make -j3
+$ make install
+$$
+Then compile V3D which works pretty much the same way: (Only if you have an nVidia card)
+$$((title=V3D compiling))
+$ cd V3D
+$ mkdir build 
+$ cd build
+$ cmake ..
+$ make -j3
+$ make install
+$$
+
+If all of this worked, you should be able to run $$install/bin/slowmoUI$$. If not, you can drop me a message on [https://plus.google.com/108007897734481705775 Google+].
