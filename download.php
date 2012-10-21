@@ -155,7 +155,7 @@ $ cmake ..
 $ make -j3
 $ make install
 $$
-Then compile V3D which works pretty much the same way: (Only if you have an nVidia card)
+Then compile V3D which works pretty much the same way:
 $$((title=V3D compiling))
 $ cd V3D
 $ mkdir build 
