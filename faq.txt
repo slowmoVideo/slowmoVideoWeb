@@ -25,13 +25,10 @@ If building does not work, here are two points to check:
 If you have multiple video cards in your PC, one of them is the primary card. This one will be used by flowBuilder. If the primary card is an AMD card and the secondary an nVidia card, you will have to change them (physically), otherwise flowBuilder will not run.
 
 ===== How can I get rid of that GPU TV-L1 window? =====
-You cannot. This is the optical flow generator, which uses GLUT, which requires a window, which is shown each time optical flow has to be calculated.
-
-To kind of get rid of it in KDE4 you can add a window rule (in $$systemsettings$$, menu point ''window behaviour'') to always open it on e.g. desktop 4 so you can work on the other desktops without constantly losing keyboard focus. Set the window title to exactly match $$GPU TV-L1 Optic Flow$$, and let the window be put on desktop 4 on initialization in the ''Geometry'' tab.
-
-On Gnome chose «always on top» for the window you currently work in.
-
-With Compiz follow [http://www.webupd8.org/2010/08/how-to-make-application-always-open-on.html this guide].
+Upgrade to slowmoVideo 0.3. If this is not possible:
+* '''KDE:''' To kind of get rid of it in KDE4 you can add a window rule (in $$systemsettings$$, menu point ''window behaviour'') to always open it on e.g. desktop 4 so you can work on the other desktops without constantly losing keyboard focus. Set the window title to exactly match $$GPU TV-L1 Optic Flow$$, and let the window be put on desktop 4 on initialization in the ''Geometry'' tab.
+* '''Gnome:''' On Gnome chose «always on top» for the window you currently work in.
+* '''Compiz:''' With Compiz follow [http://www.webupd8.org/2010/08/how-to-make-application-always-open-on.html this guide].
 
 If you have a hint on how to do this on other desktops, please drop me an e-mail.
 

@@ -3,11 +3,14 @@
 
 {{Bind:canonical=<link rel="canonical" href="http://slowmoVideo.granjow.net"/>}}
 
-slowmoVideo is an OpenSource program that creates slow-motion videos from your footage. 
+slowmoVideo is an OpenSource program that creates slow-motion videos from your footage.
 
 But it does not simply make your videos play at 0.01× speed. You can ''smoothly slow down and speed up your footage,'' optionally with motion blur.
 
 How does slow motion work? slowmoVideo tries to find out where pixels move in the video (this information is called ''Optical Flow''), and then uses this information to calculate the additional frames.
+
+=== New ===
+slowmoVideo 0.3 does not require nVidia GPUs anymore. It also runs on other video cards and (OpenCV based) on the CPU.
 
 === Features ===
 * Videos in any format supported by '''ffmpeg''' can be loaded. Image sequences can also be loaded, so, if you did a timelapse with too few frames, slowmoVideo may help as well.
@@ -18,7 +21,7 @@ The most recent changes to slowmoVideo can be read in the [[changelog.txt change
 === Technologies ===
 These parts are used by slowmoVideo:
 * [http://qt.nokia.com/ Qt4] as C++ programming framework
-* [http://www.inf.ethz.ch/personal/chzach/opensource.html GPU-KLT+FLOW] for calculating the optical flow
+* [http://www.inf.ethz.ch/personal/chzach/opensource.html GPU-KLT+FLOW] and [http://opencv.org/ OpenCV] for calculating the optical flow
 * [http://ffmpeg.org/ ffmpeg] for reading and writing video files
 
 === Thesis ===

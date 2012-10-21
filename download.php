@@ -93,7 +93,11 @@ Older packages can be found [[builds.php here]].
 
 
 === Requirements ===
-slowmoVideo runs on Linux and on Windows. It comes with two algorithms for calculating the Optical Flow, a CPU based one from OpenCV and a GPU based one from GPU-KLT+FLOW. Latter only runs on an nVidia card, the OpenCV algorithm runs everywhere.
+In a nutshell:
+* Linux or Windows
+* Any GPU for better results
+
+slowmoVideo runs on Linux and on Windows. It comes with two algorithms for calculating the Optical Flow, a CPU based one from OpenCV and a GPU based one from GPU-KLT+FLOW.
 
 The GPU flow program (optional) is called $$flowBuilder$$ and usually produces evidently better results. Is not yet available for Windows.
 
@@ -105,24 +109,20 @@ slowmoVideo is not yet available on OS X since the author does not have a Mac. I
 
 First you may have to resolve some dependencies. CMake will most likely inform you about missing packages as well, just in case some are missing here.
 * slowmoVideo requires ffmpeg or libav, the Qt4 libraries, and OpenCV.
-* If you want to use the V3D algorithm running on nVidia cards you have to install their [http://developer.nvidia.com/cg-toolkit-download Cg toolkit] (available in most repositories as well).
 * Additionally for compiling you need cmake, g++, and git.
 
 
 
 
 ==== Installing the required packages ====
-Some distribution specific installation instructions (without the Cg toolkit):
+Some distribution specific installation instructions:
 
 {{:tplSec.txt|
 ==== Debian/Ubuntu ====
 $$
 apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev
 $$
-And on Ubuntu 12.04 LTS you can directly install Cg:
-$$
-apt-get install nvidia-cg-toolkit
-$$
+
 }}
 
 {{:tplSec.txt|
@@ -148,7 +148,7 @@ $$
 
 First slomoVideo needs to be compiled. Note that currently the $$make install$$ only installs slowmoVideo to the project directory $$/install$$ and not to your root.
 $$((title=slowmoVideo compiling))
-$ cd slowmoVideo # This is not the project’s root directory but a subdirectory!
+$ cd slowmoVideo # '''This is not the project’s root directory but a subdirectory!'''
 $ mkdir build 
 $ cd build
 $ cmake ..
