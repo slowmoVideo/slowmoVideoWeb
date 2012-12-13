@@ -84,7 +84,7 @@ For Windows you additionally need to download ffmpeg from [http://ffmpeg.zeranoe
 | <?php echo downloadButton('deb', 'ubuntu12.04_amd64', '.deb (12.04 LTS)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu11.10_amd64', '.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_amd64', '.deb (10.04 LTS)', 'linux'); ?>
 |-
 ! Sources
-| <?php echo downloadButton('bz2', 'sources', '.bz2', 'sources'); ?> <a href="https://github.com/Granjow/slowmoVideo" class="download source">GitHub</a> <a href="git://granjow.net/slowmoVideo.git" class="download source">git</a>
+| <?php echo downloadButton('bz2', 'sources', '.bz2', 'sources'); ?> <a href="https://github.com/slowmoVideo" class="download source">GitHub</a> <a href="git://github.com/slowmoVideo/slowmoVideo.git" class="download source">git</a>
 |}
 
 Older packages can be found [[builds.php here]].
