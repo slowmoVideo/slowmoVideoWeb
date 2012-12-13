@@ -1,7 +1,7 @@
 {{Title:Frequently asked questions %s}}
 {{H1:FAQ}}
 
-For questions not covered by this page, please use [https://plus.google.com/108007897734481705775 Google+].
+For questions not covered by this page, please use the [https://plus.google.com/u/0/communities/116570263544012246711 Google+ community for slowmoVideo].
 
 === Compiling ===
 If building does not work, here are two points to check:
