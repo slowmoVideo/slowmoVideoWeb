@@ -145,8 +145,13 @@ $$
 
 
 ==== … and compiling slowmoVideo ====
-
-First slomoVideo needs to be compiled. Note that currently the $$make install$$ only installs slowmoVideo to the project directory $$/install$$ and not to your root.
+You can get the source code by either downloading the .bz2 archive, or by using git — latter is the recommended way as you can easily update the sources. Git works as follows:
+$$((title=Source code checkout))
+$ git clone git://github.com/slowmoVideo/slowmoVideo.git
+$ cd slowmoVideo
+$ git pull # ''Run this whenever you want to update to the latest source code version''
+$$
+Now slomoVideo needs to be compiled. Note that currently the $$make install$$ only installs slowmoVideo to the project directory’s $$/install$$ and not to your root.
 $$((title=slowmoVideo compiling))
 $ cd slowmoVideo # '''This is not the project’s root directory but a subdirectory!'''
 $ mkdir build 
@@ -155,7 +160,7 @@ $ cmake ..
 $ make -j3
 $ make install
 $$
-Then compile V3D which works pretty much the same way:
+Then compile V3D (the GPU algorithm) which works pretty much the same way:
 $$((title=V3D compiling))
 $ cd V3D
 $ mkdir build 
