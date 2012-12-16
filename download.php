@@ -120,7 +120,7 @@ Some distribution specific installation instructions:
 {{:tplSec.txt|
 ==== Debian/Ubuntu ====
 $$
-apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev
+apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev
 $$
 
 }}
