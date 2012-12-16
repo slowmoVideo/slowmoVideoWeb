@@ -114,7 +114,7 @@ First you may have to resolve some dependencies. CMake will most likely inform y
 
 
 
-==== Installing the required packages ====
+==== Installing the required packages … ====
 Some distribution specific installation instructions:
 
 {{:tplSec.txt|
