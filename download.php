@@ -70,7 +70,9 @@ function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'bu
 ?>
 }}
 
-For Windows you additionally need to download ffmpeg from [http://ffmpeg.zeranoe.com/builds/ Zeranoe] ''(32-bit Builds (Static))'' and extract $$ffmpeg.exe$$ into the same directory as $$slowmoUI.exe$$. '''Please use [http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-20121020-git-04bf2e7-win32-static.7z this version]  until slowmoVideo 0.3.1 is available for Windows. Newer ffmpeg versions will NOT work.'''
+'''For Windows''' you additionally need to download ffmpeg from [http://ffmpeg.zeranoe.com/builds/ Zeranoe] ''(32-bit Builds (Static))'' and extract $$ffmpeg.exe$$ into the same directory as $$slowmoUI.exe$$. '''Please upgrade to 0.3.1''' as older versions do not work anymore with current ffmpeg versions.
+
+'''On Linux,''' if slowmoVideo crashes in a file dialog with an error message like $$QSpiAccessible::accessibleEvent not handled$$, removing $$qt-at-spi$$ should fix the problem.
 
 <?php newest('', 'win32'); ?>
 {|
