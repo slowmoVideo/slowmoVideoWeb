@@ -89,6 +89,13 @@ function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'bu
 | <?php echo downloadButton('bz2', 'sources', '.bz2', 'sources'); ?> <a href="https://github.com/slowmoVideo" class="download source">GitHub</a> <a href="git://github.com/slowmoVideo/slowmoVideo.git" class="download source">git</a>
 |}
 
+SlowmoVideo runs also in Wine under OSX:
+1. Download Slowmo 0.31 Win and unzip it.
+2. Download Ffmpeg (http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-20130115-git-5ce023b-win32-static.7z) and place ffmpeg.exe in slowmo directory.
+3. Download Winebottler  (http://winebottler.kronenberg.org/)
+Open Slowmo with Wine from Winebottler...
+Thats it!﻿
+
 Older packages can be found [[builds.php here]].
 
 
