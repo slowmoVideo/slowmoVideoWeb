@@ -31,7 +31,7 @@
   <div class="separator"><hr/></div>
   
   <footer>
-  <p>(c) 2011–2012 Simon A. Eugster (Granjow)</p>
+  <p>(c) 2011–2013 Simon A. Eugster (Granjow)</p>
   </footer>
   
   
