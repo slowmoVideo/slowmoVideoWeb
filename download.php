@@ -91,7 +91,12 @@ function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'bu
 
 Older packages can be found [[builds.php here]].
 
-
+=== MACOSX via Wine ===
+a. Download Slowmo 0.31 Win and unzip it.
+b. Download Ffmpeg Win32 static from Zeraone (http://ffmpeg.zeranoe.com/builds/) and place ffmpeg.exe in slowmo directory.
+c. Download Winebottler  (http://winebottler.kronenberg.org/)
+Open Slowmo with Wine from Winebottler...
+Don't forget to use control (ctrl) instead of command (cmd) for Undo- and other operations...
 
 
 === Requirements ===
