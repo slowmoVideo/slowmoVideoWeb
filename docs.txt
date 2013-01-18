@@ -24,6 +24,13 @@ The monitor at the top (can be dragged around, by the way, it's a Qt4 widget) di
 slowmoVideo also supports ''Bézier curves''. A segment can be changed from linear to Bézier (and the other way round) by right-clicking on it. You will notice that the handles cannot be moved: This is wrong however. Nodes have priority, but by holding $$Shift$$ they are ignored. This is how you can drag them and create a wonderfully smooth curve.
 
 
+=== Markers ===
+[[Image:pngGUI/marker.png|thumb|Adding markers]]
+SlowmoVideo gives you also the possibility to add markers to your video material.
+Markers are helpful for orient yourself in long videos, you can mark Ins/Outs for some parts of the whole video.
+To add a marker, simple double-press the T-Key and a popup appears, where you can name your marker.
+
+
 === Motion blur ===
 [[Image:pngGUI/shutterFunction.png|thumb|180&thinsp;° shutter for 1× speed]]
 To add motion blur on a segment (the line between two nodes), right-click on it and select ''Set/edit shutter function''. The function can use several parameters; the most important one is the number of frames per second. For a film-like 180 degree shutter<ref>See e.g. [http://blog.tylerginter.com/?p=385 180 Degree Shutter – Learn It, Live It, Love It] for an explanation of the 180&thinsp;° shutter.</ref>, which is half the frame time, you would enter $$return 0.5 * 1/fps;$$ – for 24 frames per second this would return <code>0.5 * 1/24 s = 1/48 s</code>.
