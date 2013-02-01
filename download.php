@@ -41,8 +41,6 @@ function newest($suffix = '', $filter = '', $dir = 'builds')
         $n = preg_match('/slowmoVideo_(\d.\d.\d(?:-\d)?)/', $entry, $matches);
         if ($n > 0) {
             $fileInfo['%vers%'] = $matches[1];
-        } else {
-            echo 'No match: ' . $entry;
         }
 
         if (is_file($f)) {
