@@ -38,9 +38,11 @@ function newest($suffix = '', $filter = '', $dir = 'builds')
         
         
         $matches = array();
-        $n = preg_match('/slowmoVideo_(\d.\d.\d(?:-\d)?)/', 'slowmoVideo_0.3.1-1_ubuntu12.10_i386.deb', $matches);
+        $n = preg_match('/slowmoVideo_(\d.\d.\d(?:-\d)?)/', $entry, $matches);
         if ($n > 0) {
             $fileInfo['%vers%'] = $matches[1];
+        } else {
+            echo 'No match: ' . $entry;
         }
 
         if (is_file($f)) {
