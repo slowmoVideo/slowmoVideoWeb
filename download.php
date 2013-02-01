@@ -33,7 +33,15 @@ function newest($suffix = '', $filter = '', $dir = 'builds')
             '%path%' => $f,
             '%date%' => date('Y-m-d H:i:s', filectime($f)),
             '%size%' => $fileSize,
+            '%vers%' => '',
         );
+        
+        
+        $matches = array();
+        $n = preg_match('/slowmoVideo_(\d.\d.\d(?:-\d)?)/', 'slowmoVideo_0.3.1-1_ubuntu12.10_i386.deb', $matches);
+        if ($n > 0) {
+            $fileInfo['%vers%'] = $matches[1];
+        }
 
         if (is_file($f)) {
             if ( strlen($suffix) == 0 || substr_compare($f, $suffix, -strlen($suffix)) == 0 ) {
@@ -64,7 +72,7 @@ function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'bu
     
     $first['%text%'] = $text;
     $first['%css%'] = $cssClass;
-    return strtr("<a class='download %css%' href='%path%'>%text% (%size%)</a>", $first);
+    return strtr("<a class='download %css%' href='%path%'>%vers% %text% (%size%)</a>", $first);
 }
 
 ?>
@@ -79,14 +87,17 @@ function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'bu
 ! Windows
 | <?php echo downloadButton('7z', 'win32', '.7z', 'windows'); ?> <?php echo downloadButton('zip', 'win32', '.zip', 'windows'); ?> <?php echo downloadButton('exe', 'win32', '.exe', 'windows'); ?>
 |-
-! Ubuntu 32-bit
-| <?php echo downloadButton('deb', 'ubuntu12.04_i386', '.deb (12.04 LTS)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu11.10_i386', '.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_i386', '.deb (10.04 LTS)', 'linux'); ?>
+! Ubuntu 12.10
+| <?php echo downloadButton('deb', 'ubuntu12.10_i386', 'i386.deb', 'linux'); ?>  <?php echo downloadButton('deb', 'ubuntu12.10_amd64', 'amd64.deb', 'linux'); ?>
 |-
-! Linux 64-bit
-| <?php echo downloadButton('deb', 'ubuntu12.04_amd64', '.deb (12.04 LTS)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu11.10_amd64', '.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_amd64', '.deb (10.04 LTS)', 'linux'); ?>
+! Ubuntu 12.04
+| <?php echo downloadButton('deb', 'ubuntu12.04_i386', 'i386.deb', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu12.04_amd64', 'amd64.deb', 'linux'); ?> 
 |-
 ! Sources
 | <?php echo downloadButton('bz2', 'sources', '.bz2', 'sources'); ?> <a href="https://github.com/slowmoVideo" class="download source">GitHub</a> <a href="git://github.com/slowmoVideo/slowmoVideo.git" class="download source">git</a>
+|-
+! Older systems
+| <?php echo downloadButton('deb', 'ubuntu11.10_i386', 'i386.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_i386', 'i386.deb (10.04 LTS)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu11.10_amd64', 'amd64.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_amd64', 'amd64.deb (10.04 LTS)', 'linux'); ?>
 |}
 
 Older packages can be found [[builds.php here]].
