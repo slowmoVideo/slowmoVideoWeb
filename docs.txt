@@ -31,8 +31,10 @@ Markers are helpful for orient yourself in long videos, you can mark Ins/Outs fo
 To add a marker, simple double-press the T-Key and a popup appears, where you can name your marker.
 
 
-=== Motion blur ===
+=== Motion Blur ===
 [[Image:pngGUI/shutterFunction.png|thumb|180&thinsp;° shutter for 1× speed]]
+Motion blur is mainly thought for making videos with higher replay speed look more real. Quickly moving objects would blur normally, but when accelerating a piece of video simply by “take each 3<sup>rd</sup> image” motion blur is reduced to a third of the original value. This option fixes this.
+
 To add motion blur on a segment (the line between two nodes), right-click on it and select ''Set/edit shutter function''. The function can use several parameters; the most important one is the number of frames per second. For a film-like 180 degree shutter<ref>See e.g. [http://blog.tylerginter.com/?p=385 180 Degree Shutter – Learn It, Live It, Love It] for an explanation of the 180&thinsp;° shutter.</ref>, which is half the frame time, you would enter $$return 0.5 * 1/fps;$$ – for 24 frames per second this would return <code>0.5 * 1/24 s = 1/48 s</code>.
 
 Now this is only correct if the video is re-played at 1× speed. If the curve you define plays the video at 10× speed, 10× as many input frames are played, so the shutter should be 10× as long as well. The $$dy$$ variable is exactly what you need now: It contains the input time that is covered by the current frame, which for 10× speed would be <code>10/24 s</code>. So, the correct expression is: $$return 0.5 * dy;$$
