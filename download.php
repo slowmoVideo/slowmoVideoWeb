@@ -170,14 +170,14 @@ $ git clone git://github.com/slowmoVideo/slowmoVideo.git
 $ cd slowmoVideo
 $ git pull # ''Run this whenever you want to update to the latest source code version''
 $$
-Now slomoVideo needs to be compiled. Note that currently the $$make install$$ only installs slowmoVideo to the project directory’s $$/install$$ and not to your root.
+Now slomoVideo needs to be compiled and installed.
 $$((title=slowmoVideo compiling))
 $ cd slowmoVideo # '''This is not the project’s root directory but a subdirectory!'''
 $ mkdir build 
 $ cd build
 $ cmake ..
 $ make -j3
-$ make install
+$ sudo make install
 $$
 Then compile V3D (the GPU algorithm) which works pretty much the same way:
 $$((title=V3D compiling))
@@ -186,7 +186,11 @@ $ mkdir build
 $ cd build
 $ cmake ..
 $ make -j3
-$ make install
+$ sudo make install
+$$
+If you want to install slowmoVideo to a different directory (e.g. your home directory) so you don’t need root rights, run cmake as follows instead (both times):
+$$((title=Different install directory))
+$ cmake .. -DCMAKE_INSTALL_PREFIX=''/home/archibald/slowmoVideo''
 $$
 
 If all of this worked, you should be able to run $$install/bin/slowmoUI$$. If not, please find help in the [https://plus.google.com/u/0/communities/116570263544012246711 Google+ community].
