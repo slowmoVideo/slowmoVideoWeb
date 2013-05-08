@@ -87,11 +87,8 @@ function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'bu
 ! Windows
 | <?php echo downloadButton('7z', 'win32', '.7z', 'windows'); ?> <?php echo downloadButton('zip', 'win32', '.zip', 'windows'); ?> <?php echo downloadButton('exe', 'win32', '.exe', 'windows'); ?>
 |-
-! Ubuntu 12.10
-| <?php echo downloadButton('deb', 'ubuntu12.10_i386', 'i386.deb', 'linux'); ?>  <?php echo downloadButton('deb', 'ubuntu12.10_amd64', 'amd64.deb', 'linux'); ?>
-|-
-! Ubuntu 12.04
-| <?php echo downloadButton('deb', 'ubuntu12.04_i386', 'i386.deb', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu12.04_amd64', 'amd64.deb', 'linux'); ?> 
+! Ubuntu
+| <a href="https://launchpad.net/~brousselle/+archive/slowmovideo" class="download linux">PPA on Launchpad</a>
 |-
 ! Sources
 | <?php echo downloadButton('bz2', 'sources', '.bz2', 'sources'); ?> <a href="https://github.com/slowmoVideo" class="download source">GitHub</a> <a href="git://github.com/slowmoVideo/slowmoVideo.git" class="download source">git</a>
