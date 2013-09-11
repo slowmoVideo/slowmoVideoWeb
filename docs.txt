@@ -13,15 +13,19 @@ New projects should be created in an ''empty'' directory. You can either select 
 === Curves ===
 [[Image:pngGUI/simpleCurve.png|thumb|Simple linear curve]]
 The canvas now is your playground. It has two axis:
-* The vertical ''source axis'' where the frame number is displayed at the current cursor position. Imagine a reel of film rolled out along this axis. This is how it works. The first frame is at the bottom, the last frame is at the fat line that becomes visible when zooming out with Ctrl+Mousewheel.
-* The horizontal ''output axis'' will be the rendered video. Now if you draw a curve, what slowmoVideo does is that for each output frame it draws a vertical line and looks where it crosses your curve. From this point it goes left until it hits the source axis and takes the frame at this position.
+* The vertical '''source axis''' where the frame number is displayed at the current cursor position. Imagine a reel of film rolled out along this axis. This is how it works. The first frame is at the bottom, the last frame is at the fat line that becomes visible when zooming out with Ctrl+Mousewheel.
+* The horizontal '''output axis''' will be the rendered video. Now if you draw a curve, what slowmoVideo does is that for each output frame it draws a vertical line and looks where it crosses your curve. From this point it goes left until it hits the source axis and takes the frame at this position.
 
 With this information you see that, in the picture on the right, the first line plays the video at its original speed since the time passed on the output axis is the same as the time passed on the source axis. The second line stops the video, the third line plays it at low speed (maybe 7&nbsp;%). The last line plays the video in reverse direction.
 
-The monitor at the top (can be dragged around, by the way, it's a Qt4 widget) displays the source frame at the mouse position.
+'''Hint—If you have difficulties understanding the curves:''' imagine that you are walking on the canvas from left to right. On the left, i.e. behind you when walking, there is a wall showing all frames of the video you recorded, one after another, starting at the bottom. Each step you do is a frame, and as you walk, you take a look back at the wall after each step. If you walk on a straight line from left to right, you always see the same picture. If you walk from bottom left to top right, you have eventually seen the whole video. Now let’s allow to move arbitrarily from bottom to top or back, and just count the steps to the right. Take one step to the right and three to the top, and when looking back at the wall, the frames pass three times faster. Or take ¼ step downwards instead, and the frames play in reverse at ¼ speed.
+
+The monitor at the top (can be dragged around, by the way, it’s a Qt4 widget) displays the source frame at the mouse position.
 
 [[Image:pngGUI/bezierCurve.png|thumb|Bézier curves]]
-slowmoVideo also supports ''Bézier curves''. A segment can be changed from linear to Bézier (and the other way round) by right-clicking on it. You will notice that the handles cannot be moved: This is wrong however. Nodes have priority, but by holding $$Shift$$ they are ignored. This is how you can drag them and create a wonderfully smooth curve.
+slowmoVideo also supports '''Bézier curves'''. A segment can be changed from linear to Bézier (and the other way round) by right-clicking on it. The reason why you absolutely want to use them is that the speed does not change abruptly from 1× to ¼×, for example, but very smoothly.
+
+You may notice that the Bézier handles cannot be moved: This is wrong however. Nodes have priority, but by holding $$Shift$$ they are ignored. This is how you can drag them and create a wonderfully smooth curve.
 
 
 === Markers ===
