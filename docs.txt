@@ -11,7 +11,7 @@ New projects should be created in an ''empty'' directory. You can either select 
 
 
 === Curves ===
-[[Image:pngGUI/simpleCurve.png|thumb|Simple linear curve]]
+[[Image:pngGUI/simpleCurveAnnotated.png|thumb|Simple linear curve]]
 The canvas now is your playground. It has two axis:
 * The vertical '''source axis''' where the frame number is displayed at the current cursor position. Imagine a reel of film rolled out along this axis. This is how it works. The first frame is at the bottom, the last frame is at the fat line that becomes visible when zooming out with Ctrl+Mousewheel.
 * The horizontal '''output axis''' will be the rendered video. Now if you draw a curve, what slowmoVideo does is that for each output frame it draws a vertical line and looks where it crosses your curve. From this point it goes left until it hits the source axis and takes the frame at this position.
