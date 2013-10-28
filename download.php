@@ -135,8 +135,9 @@ Some distribution specific installation instructions:
 
 {{:tplSec.txt|
 ==== Debian/Ubuntu ====
+Note: On debian, the OpenCV package is called ''lib''opencv-dev, on Ubuntu it is just opencv-dev.
 $$
-apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev
+apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev opencv-dev
 $$
 
 }}
