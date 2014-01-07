@@ -99,12 +99,12 @@ function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'bu
 
 Older packages can be found [[builds.php here]].
 
-=== Mac OS X via Wine ===
-There is no native port yet for OS X, but Wine allows to run the Windows build:
+=== Mac OS X ===
+There is no native port yet for OS X, but Wine or Crossover allow to run the Windows build:
 # Download slowmoVideo for Windows and unzip it
 # Download the ffmpeg Win32 static builds from [http://ffmpeg.zeranoe.com/builds/ Zeranoe] and place ffmpeg.exe in the same directory as $$slowmoUI.exe$$
-# Install [http://winebottler.kronenberg.org/ Winebottler]
-# Open slowmoVideo with Wine from Winebottler
+# Install [http://winebottler.kronenberg.org/ Winebottler] or [http://www.codeweavers.com/products/crossover-mac/ Crossover] ($)
+# Open slowmoVideo with Wine from Winebottler or with Crossover
 Don’t forget to use control (Ctrl) instead of command (Cmd) for Undo and other operations.
 
 
