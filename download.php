@@ -90,6 +90,9 @@ function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'bu
 ! Ubuntu
 | <a href="https://launchpad.net/~brousselle/+archive/slowmovideo" class="download linux">PPA on Launchpad</a>
 |-
+! openSUSE
+| <a href="http://packman.links2linux.org/package/slowmoVideo" class="download linux">openSUSE on Packman</a>
+|-
 ! Sources
 | <?php echo downloadButton('bz2', 'sources', '.bz2', 'sources'); ?> <a href="https://github.com/slowmoVideo" class="download source">GitHub</a> <a href="git://github.com/slowmoVideo/slowmoVideo.git" class="download source">git</a>
 |-
@@ -169,7 +172,7 @@ $$
 
 {{:tplSec.txt|
 ==== openSUSE ====
-As with Fedora an additional repository is required for ffmpeg, [http://en.opensuse.org/Additional_package_repositories#Packman Packman].
+As with Fedora, an additional repository is required for ffmpeg, [http://en.opensuse.org/Additional_package_repositories#Packman Packman].
 
 $$
 zypper in cmake ffmpeg libffmpeg-devel git libqt4-devel gcc-c++ glew-devel freeglut-devel libSDL-devel opencv-devel
