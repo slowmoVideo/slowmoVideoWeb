@@ -144,13 +144,16 @@ For Ubuntu 14.04 follow these build instructions:
 
 $$
 $ sudo apt-get install build-essential cmake git libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev libopencv-dev
-$ git clone git@github.com:valgit/slowmoVideo.git
+$ sudo add-apt-repository ppa:jon-severinsson/ffmpeg
+$ sudo apt-get update
+$ sudo apt-get install ffmpeg
+$ git clone git://github.com/slowmoVideo/slowmoVideo.git
+$ cd slowmoVideo/
 $ mkdir build
-$ cd build
+$ cd build/
 $ cmake -DENABLE_TESTS=FALSE ../src 
 $ make
 $ sudo make install
-$ sudo cp slowmoVideo/slowmoUI/slowmoUI /usr/local/bin/
 $$ 
 
 }}
