@@ -125,6 +125,19 @@ nav ul li.open a {
 	color: #272727;
 }
 
+.headerNote {
+    background-color: #90f442;
+    color: #454545;
+    margin-top: 1em;
+    padding: .5em;
+    border: 0;
+    border-radius: 5px;
+}
+.headerNote a {
+    color: #454545;
+    font-weight: bold;
+}
+
 h2 {
 	clear: both;
 	font-size: 32px;

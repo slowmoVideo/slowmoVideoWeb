@@ -22,6 +22,10 @@
   {{{menu|}}}
   <br class="c"/>
   </nav>
+
+  <div class="headerNote">
+  <em>MOVED</em> — Please find the documentation <a href="https://github.com/slowmoVideo/slowmoVideo/wiki">on GitHub</a> now!
+  </div>
   
   <h2>{{{h1|}}}</h2>
   {{{text|}}}
