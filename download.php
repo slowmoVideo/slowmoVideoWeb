@@ -140,6 +140,22 @@ $$
 apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev opencv-dev
 $$
 
+For Ubuntu 14.04 follow these build instructions:
+
+$$
+$ sudo apt-get install build-essential cmake git libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev libopencv-dev
+$ sudo add-apt-repository ppa:jon-severinsson/ffmpeg
+$ sudo apt-get update
+$ sudo apt-get install ffmpeg
+$ git clone git://github.com/slowmoVideo/slowmoVideo.git
+$ cd slowmoVideo/
+$ mkdir build
+$ cd build/
+$ cmake -DENABLE_TESTS=FALSE ../src 
+$ make
+$ sudo make install
+$$ 
+
 }}
 
 {{:tplSec.txt|
@@ -178,7 +194,7 @@ $ sudo make install
 $$
 If you want to install slowmoVideo to a different directory (e.g. your home directory) so you don’t need root rights, run cmake as below instead. By default, slowmoVideo is installed to $$/usr/local/bin/$$.
 $$((title=Different install directory))
-$ cmake .. -DCMAKE_INSTALL_PREFIX=''/home/archibald/slowmoVideo''
+$ cmake ../src -DCMAKE_INSTALL_PREFIX=''/home/archibald/slowmoVideo''
 $$
 
 If all of this worked, you should be able to run $$slowmoUI$$. If not, please find help in the [https://plus.google.com/u/0/communities/116570263544012246711 Google+ community].
