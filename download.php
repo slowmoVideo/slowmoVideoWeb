@@ -154,11 +154,10 @@ $ git clone git://github.com/slowmoVideo/slowmoVideo.git
 $ cd slowmoVideo/
 $ mkdir build
 $ cd build/
-$ cmake -DENABLE_TESTS=FALSE ../src 
+$ cmake -DENABLE_TESTS=FALSE ../src
 $ make
 $ sudo make install
-$$ 
-
+$$
 }}
 
 {{:tplSec.txt|
