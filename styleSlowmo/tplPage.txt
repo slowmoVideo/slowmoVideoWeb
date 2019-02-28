@@ -35,13 +35,9 @@
   <div class="separator"><hr/></div>
   
   <footer>
-  <p>(c) 2011—2015 Simon A. Eugster (Granjow)</p>
+  <p>(c) 2011—2019 Simon A. Eugster (Granjow)</p>
   </footer>
   
-  
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-  <g:plusone size="small"></g:plusone>
-
   </div><!-- End of the content div -->
 </div>
 
