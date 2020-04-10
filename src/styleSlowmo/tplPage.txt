@@ -24,7 +24,7 @@
   </nav>
 
   <div class="headerNote">
-  <em>MOVED</em> — Please find the documentation <a href="https://github.com/slowmoVideo/slowmoVideo/wiki">on GitHub</a> now!
+  This is the official slowmoVideo site. Find the code <a href="https://github.com/slowmoVideo">on GitHub!</a>
   </div>
   
   <h2>{{{h1|}}}</h2>
@@ -35,7 +35,7 @@
   <div class="separator"><hr/></div>
   
   <footer>
-  <p>(c) 2011—2019 Simon A. Eugster (Granjow)</p>
+  <p>(c) 2011—2020 Simon A. Eugster (Granjow)</p>
   </footer>
   
   </div><!-- End of the content div -->

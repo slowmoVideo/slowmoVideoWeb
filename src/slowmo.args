@@ -1,0 +1,9 @@
+args=-s styleSlowmo -m menu.txt -c config.txt -o ../html --sitemap=http://slowmoVideo.granjow.net
+
+dir=src
+index.txt
+contribute.txt
+download.txt
+docs.txt
+faq.txt
+videos.txt

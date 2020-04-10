@@ -3,89 +3,13 @@
 
 {{Bind:canonical=<link rel="canonical" href="http://slowmoVideo.granjow.net/download.html"/>}}
 
-{{Bind:php=<?php
-
-date_default_timezone_set('UTC');
-
-function newest($suffix = '', $filter = '', $dir = 'builds')
-{
-    $fileList = array();
-    $files = scandir($dir);
-    if (!$files) {
-        echo '<p>No files in <em>' . $dir . '</em>.</p>';
-        return;
-    }
-    foreach ($files as $entry) {
-
-        $f = $dir . '/' . $entry;
-        
-        $fileSizeBits = filesize('builds/' . $entry);
-        if ($fileSizeBits/1024 < 1000) {
-            $fileSize = sprintf('%.0f KB', $fileSizeBits/1024);
-        } else if ($fileSizeBits/1024/1024 < 10) {
-            $fileSize = sprintf('%.1f MB', $fileSizeBits/1024/1024);
-        } else {
-            $fileSize = sprintf('%.0f MB', $fileSizeBits/1024/1024);
-        }
-
-        $fileInfo = array(
-            '%name%' => $entry,
-            '%path%' => $f,
-            '%date%' => date('Y-m-d H:i:s', filectime($f)),
-            '%size%' => $fileSize,
-            '%vers%' => '',
-        );
-        
-        
-        $matches = array();
-        $n = preg_match('/slowmoVideo_(\d.\d.\d(?:-\d)?)/', $entry, $matches);
-        if ($n > 0) {
-            $fileInfo['%vers%'] = $matches[1];
-        }
-
-        if (is_file($f)) {
-            if ( strlen($suffix) == 0 || substr_compare($f, $suffix, -strlen($suffix)) == 0 ) {
-                if ( strlen($filter) == 0 || strpos($f, $filter) !== false ) {
-                    $fileList[filectime($f) . md5($f)] = $fileInfo;
-                }
-            }
-        }
-    }
-    
-    krsort($fileList);
-    
-    if (count($fileList) > 0) {
-        return reset($fileList);
-    } else {
-        return null;
-    }
-}
-
-function downloadButton($suffix = '', $filter = '', $text, $cssClass, $dir = 'builds')
-{
-    $first = newest($suffix, $filter, $dir);
-    if ($first == null) {
-        return "";
-    }
-    
-    //print_r($first);
-    
-    $first['%text%'] = $text;
-    $first['%css%'] = $cssClass;
-    return strtr("<a class='download %css%' href='%path%'>%vers% %text% (%size%)</a>", $first);
-}
-
-?>
-}}
-
 '''For Windows''' you additionally need to download ffmpeg from [http://ffmpeg.zeranoe.com/builds/ Zeranoe] ''(32-bit Builds (Static))'' and extract $$ffmpeg.exe$$ into the same directory as $$slowmoUI.exe$$. '''Please upgrade to 0.3.1''' as older versions do not work anymore with current ffmpeg versions.
 
 '''On Linux,''' if slowmoVideo crashes in a file dialog with an error message like $$QSpiAccessible::accessibleEvent not handled$$, removing $$qt-at-spi$$ should fix the problem.
 
-<?php newest('', 'win32'); ?>
 {|
 ! Windows
-| <?php echo downloadButton('7z', 'win32', '.7z', 'windows'); ?> <?php echo downloadButton('zip', 'win32', '.zip', 'windows'); ?> <?php echo downloadButton('exe', 'win32', '.exe', 'windows'); ?>
+| WIP
 |-
 ! Ubuntu
 | <a href="https://launchpad.net/~brousselle/+archive/slowmovideo" class="download linux">PPA on Launchpad</a>

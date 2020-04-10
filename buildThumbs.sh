@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pushd src || exit 1
+
 if [ ! -e thumbs ]
 then
     mkdir thumbs
@@ -11,3 +13,5 @@ do
     out="thumbs/thumb_$(basename $i)"
     convert -resize 300x300 $i ${out}
 done
+
+popd || exit 1
