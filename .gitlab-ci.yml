@@ -1,0 +1,28 @@
+
+build:
+  stage: build
+  image: granjow/wiki2xhtml:1.0.0
+  tags:
+    - linux
+    - docker
+  script:
+    - make
+  artifacts:
+    paths:
+      - html/
+
+deploy:
+  stage: deploy
+  image: ubuntu:20.04
+  tags:
+    - slowmovideoweb
+  dependencies:
+    - build
+  only:
+  - master
+  script:
+    - rm -rfv /var/www/html/*
+    - cp -rfvT html/ /var/www/html/
+  environment:
+    name: slowmoVideo
+    url: http://slowmovideo.granjow.net
