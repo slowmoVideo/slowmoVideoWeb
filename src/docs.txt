@@ -14,7 +14,7 @@ New projects should be created in an ''empty'' directory. You can either select 
 [[Image:pngGUI/simpleCurveAnnotated.png|thumb|Simple linear curve]]
 The canvas now is your playground. It has two axis:
 * The vertical '''source axis''' where the frame number is displayed at the current cursor position. Imagine a reel of film rolled out along this axis. This is how it works. The first frame is at the bottom, the last frame is at the fat line that becomes visible when zooming out with Ctrl+Mousewheel.
-* The horizontal '''output axis''' will be the rendered video. Now if you draw a curve, what slowmoVideo does is that for each output frame it draws a vertical line and looks where it crosses your curve. From this point it goes left until it hits the source axis and takes the frame at this position.
+* The horizontal '''output axis''' will be the rendered video. Now if you draw a curve, what slowmoVideo does is that for each output frame it draws a vertical line and looks where it crosses your curve. From this point it goes left until it hits the source axis and takes the frame at this position. Drawing is done by creating nodes (double click on canvas).  Nodes will be connected by a line.
 
 With this information you see that, in the picture on the right, the first line plays the video at its original speed since the time passed on the output axis is the same as the time passed on the source axis. The second line stops the video, the third line plays it at low speed (maybe 7&nbsp;%). The last line plays the video in reverse direction.
 
@@ -57,6 +57,23 @@ Since rendering is a time-consuming process, you might want to render with the s
 Some rendering artifacts can be removed by editing the optical flow.
 
 <nowiki><iframe width="560" height="315" src="http://www.youtube.com/embed/aLtIvEiDD2k" frameborder="0" allowfullscreen></iframe></nowiki>
+
+=== Command Line Examples ===
+
+To make a video 5x slower:
+
+$$
+/usr/local/bin/slowmoRenderer -target video /root/timelapse/test.mp4 auto -input video /root/timelapse/timelapse.mp4 -slowfactor .2 -start :start -end :end -interpolation twoway2 -size orig
+$$
+
+To interpolate additional frames in a sequence of images:
+
+$$
+<nowiki>
+# Note: The formattingPattern (???) for input source is unclear.
+> /usr/local/bin/slowmoRenderer -target images /root/timelapse/interpolated/%1.jpg -input images ??? /root/timelapse/source_images/ -slowfactor .2 -start :start -end :end -interpolation twoway2 -size orig
+</nowiki>
+$$
 
 
 === Links ===

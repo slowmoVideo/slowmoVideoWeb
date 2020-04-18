@@ -24,7 +24,7 @@
   </nav>
 
   <div class="headerNote">
-  This is the official slowmoVideo site. Find the code <a href="https://github.com/slowmoVideo">on GitHub!</a>
+	  Coders: <a href="https://github.com/slowmoVideo">Go to GitHub</a>, or <a href="https://github.com/slowmoVideo/slowmoVideoWeb">edit this page</a>!
   </div>
   
   <h2>{{{h1|}}}</h2>

@@ -7,6 +7,10 @@
 # You may want to try a lower lambda value (5 or 10) in the rendering dialog. 
 # Alternatively you can manually fix the optical flow with slowmoFlowEdit, a short tutorial is [http://www.youtube.com/watch?v=aLtIvEiDD2k here]. This is often a good solution if you are sure that you want to use a clip of your video and need to remove some errors.
 
+==== Black stripped frames output ====
+
+Change to "_Farnback_" for _CPU, OpenCV_ in the Preferences settings. Close slowmoVideo. Delete project caches from project folders and temporary files.
+
 
 === slowmoUI ===
 
