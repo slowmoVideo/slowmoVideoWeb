@@ -10,16 +10,19 @@ But it does not simply make your videos play at 0.01× speed. You can ''smoothly
 How does slow motion work? slowmoVideo tries to find out where pixels move in the video (this information is called ''Optical Flow''), and then uses this information to calculate the additional frames between the ones recorded by your camera.
 
 === Features ===
+
 * Videos in any format supported by '''ffmpeg''' can be loaded. Image sequences can also be loaded, so, if you did a timelapse with too few frames, slowmoVideo may help as well.
-* slowmoVideo does not work with a constant '''slowdown''' factor but with curves that allow arbitrary time accelereation/deceleration/reversal.
+* slowmoVideo does not work with a constant slowdown factor but with curves that allow '''arbitrary time accelereation/deceleration/reversal.'''
 * '''Motion blur''' can be added, as much as you want.
-The most recent changes to slowmoVideo can be read in the [[changelog.txt changelog]].
 
 === Technologies ===
+
 These parts are used by slowmoVideo:
-* [http://qt.nokia.com/ Qt4] as C++ programming framework
-* [http://www.inf.ethz.ch/personal/chzach/opensource.html GPU-KLT+FLOW] and [http://opencv.org/ OpenCV] for calculating the optical flow
+
+* [http://qt.nokia.com/ Qt5] as C++ programming framework
+* [http://opencv.org/ OpenCV] and GPU-KLT+FLOW for calculating the optical flow
 * [http://ffmpeg.org/ ffmpeg] for reading and writing video files
 
 === Thesis ===
+
 I wrote slowmoVideo as my bachelor thesis at [http://www.ethz.ch/ ETH Zürich]. The thesis can be read [[resources/slowmoVideo.pdf here]] (PDF, 2 MB).

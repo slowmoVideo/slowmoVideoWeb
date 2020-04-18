@@ -1,126 +1,43 @@
 {{Title:Download slowmoVideo %s}}
 {{H1:Download}}
 
-{{Bind:canonical=<link rel="canonical" href="http://slowmoVideo.granjow.net/download.html"/>}}
+slowmoVideo requires $$ffmpeg$$ to run. The AppImage file for Linux first has
+to be made executable with $$chmod u+x$$.
 
+{|
+! Linux || <a href="https://github.com/slowmoVideo/slowmoVideo/releases/download/v0.6/slowmoUI-0.6-x86_64.AppImage" class="download linux">slowmoVideo 0.6 AppImage</a>
+|-
+! Sources
+| <a href="https://github.com/slowmoVideo" class="download source">Clone on GitHub</a>
+|-
+! Older Builds || [[builds here]]
+|-
+! Windows || To do – help needed
+|-
+! OS X || To do – help needed
+|}
+
+To run the AppImage file on Linux, you have to make it executable first with $$chmod u+x slowmoUI.AppImage$$.
+
+Help for OS X and Windows builds is appreciated.
+
+
+<!--
 '''For Windows''' you additionally need to download ffmpeg from [http://ffmpeg.zeranoe.com/builds/ Zeranoe] ''(32-bit Builds (Static))'' and extract $$ffmpeg.exe$$ into the same directory as $$slowmoUI.exe$$. '''Please upgrade to 0.3.1''' as older versions do not work anymore with current ffmpeg versions.
 
 '''On Linux,''' if slowmoVideo crashes in a file dialog with an error message like $$QSpiAccessible::accessibleEvent not handled$$, removing $$qt-at-spi$$ should fix the problem.
 
-{|
-! Windows
-| WIP
-|-
-! Ubuntu
-| <a href="https://launchpad.net/~brousselle/+archive/slowmovideo" class="download linux">PPA on Launchpad</a>
-|-
-! openSUSE
-| <a href="http://packman.links2linux.org/package/slowmoVideo" class="download linux">openSUSE on Packman</a>
-|-
-! Sources
-| <?php echo downloadButton('bz2', 'sources', '.bz2', 'sources'); ?> <a href="https://github.com/slowmoVideo" class="download source">GitHub</a> <a href="git://github.com/slowmoVideo/slowmoVideo.git" class="download source">git</a>
-|-
-! Older systems
-| <?php echo downloadButton('deb', 'ubuntu11.10_i386', 'i386.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_i386', 'i386.deb (10.04 LTS)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu11.10_amd64', 'amd64.deb (11.10)', 'linux'); ?> <?php echo downloadButton('deb', 'ubuntu10.04_amd64', 'amd64.deb (10.04 LTS)', 'linux'); ?>
-|}
-
-Older packages can be found [[builds.php here]].
 
 === Mac OS X ===
+
 There is no native port yet for OS X, but Wine or Crossover allow to run the Windows build:
+
 # Download slowmoVideo for Windows and unzip it
 # Download the ffmpeg Win32 static builds from [http://ffmpeg.zeranoe.com/builds/ Zeranoe] and place ffmpeg.exe in the same directory as $$slowmoUI.exe$$
 # Install [http://winebottler.kronenberg.org/ Winebottler] or [http://www.codeweavers.com/products/crossover-mac/ Crossover] ($)
 # Open slowmoVideo with Wine from Winebottler or with Crossover
+
 Don’t forget to use control (Ctrl) instead of command (Cmd) for Undo and other operations.
 
-
-=== Requirements ===
-In a nutshell:
-* Linux or Windows
-* Any GPU for better results
-
-slowmoVideo runs on Linux and on Windows. It comes with two algorithms for calculating the Optical Flow, a CPU based one from OpenCV and a GPU based one from GPU-KLT+FLOW.
-
-The GPU flow program (optional) is called $$flowBuilder$$ and usually produces evidently better results. Is not yet available for Windows.
-
 slowmoVideo is not yet available on OS X since the author does not have a Mac. It should compile easily however. [[contribute.html Help is appreciated]] :)
-
-
-== Compiling ==
-''The following instructions are only important for you if you want to develop slowmoVideo or if there is no package for your distribution.''
-
-First you may have to resolve some dependencies. CMake will most likely inform you about missing packages as well, just in case some are missing here.
-* slowmoVideo requires ffmpeg or libav, the Qt4 libraries, and OpenCV.
-* Additionally for compiling you need cmake, g++, and git.
-
-
-
-
-==== Installing the required packages … ====
-Some distribution specific installation instructions:
-
-{{:tplSec.txt|
-==== Debian/Ubuntu ====
-Note: On debian, the OpenCV package is called ''lib''opencv-dev, on Ubuntu it is just opencv-dev.
-$$
-apt-get install build-essential cmake git ffmpeg libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev opencv-dev
-$$
-
-For Ubuntu 14.04 follow these build instructions:
-
-$$
-$ sudo apt-get install build-essential cmake git libavformat-dev libavcodec-dev libswscale-dev libqt4-dev freeglut3-dev libglew1.5-dev libsdl1.2-dev libjpeg-dev libopencv-video-dev libopencv-highgui-dev libopencv-dev
-$ sudo add-apt-repository ppa:jon-severinsson/ffmpeg
-$ sudo apt-get update
-$ sudo apt-get install ffmpeg
-$ git clone git://github.com/slowmoVideo/slowmoVideo.git
-$ cd slowmoVideo/
-$ mkdir build
-$ cd build/
-$ cmake -DENABLE_TESTS=FALSE ../src
-$ make
-$ sudo make install
-$$
-}}
-
-{{:tplSec.txt|
-==== Fedora ====
-For ffmpeg you may need to add the rpmfusion repository first, as explained [http://rpmfusion.org/Configuration/ here].
-
-$$
-yum install cmake ffmpeg ffmpeg-devel git qt4-devel gcc-c++ glew-devel glut-devel SDL-devel libpng-devel libjpeg-devel opencv-devel
-$$
-}}
-
-{{:tplSec.txt|
-==== openSUSE ====
-As with Fedora, an additional repository is required for ffmpeg, [http://en.opensuse.org/Additional_package_repositories#Packman Packman].
-
-$$
-zypper in cmake ffmpeg libffmpeg-devel git libqt4-devel gcc-c++ glew-devel freeglut-devel libSDL-devel opencv-devel
-$$
-}}
-
-
-==== … and compiling slowmoVideo ====
-You can get the source code by either downloading the .bz2 archive, or by using git — latter is the recommended way as you can easily update the sources. Git works as follows:
-$$((title=Source code checkout))
-$ git clone git://github.com/slowmoVideo/slowmoVideo.git
-$ cd slowmoVideo
-$ git pull # ''Run this whenever you want to update to the latest source code version''
-$$
-Now slomoVideo needs to be compiled and installed. (Note: This has changed recently, and flowBuilder does not need to be compiled separately anymore.)
-$$((title=Compiling))
-$ mkdir build 
-$ cd build
-$ cmake ../src
-$ make -j3
-$ sudo make install
-$$
-If you want to install slowmoVideo to a different directory (e.g. your home directory) so you don’t need root rights, run cmake as below instead. By default, slowmoVideo is installed to $$/usr/local/bin/$$.
-$$((title=Different install directory))
-$ cmake ../src -DCMAKE_INSTALL_PREFIX=''/home/archibald/slowmoVideo''
-$$
-
-If all of this worked, you should be able to run $$slowmoUI$$. If not, please find help in the [https://plus.google.com/u/0/communities/116570263544012246711 Google+ community].
+-->

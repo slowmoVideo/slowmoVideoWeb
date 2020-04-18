@@ -5,4 +5,4 @@ Want to contribute to slowmoVideo? The project is on GitHub:
 : https://github.com/slowmoVideo
 The easiest way to start hacking is to fork the repository and to send a pull request so I can apply the changes.
 
-slowmoVideo is using the Qt framework, so the easiest thing is to use the lightweight (starts quickly) but powerful [http://en.wikipedia.org/wiki/Qt_Creator Qt Creator] for development.
+Check the milestones in the issues to get an idea of the current topics.
